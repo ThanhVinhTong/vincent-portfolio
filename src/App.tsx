@@ -40,7 +40,7 @@ export default function App() {
             </TabsTrigger>
             <TabsTrigger value="skills" className="flex items-center gap-2">
               <Award className="h-4 w-4" />
-              Skills
+              Achievements
             </TabsTrigger>
             <TabsTrigger value="contact" className="flex items-center gap-2">
               <Mail className="h-4 w-4" />

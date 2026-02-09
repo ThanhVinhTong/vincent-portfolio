@@ -28,7 +28,7 @@ export function ResumeHeader() {
             <div>
               <h4 className="mb-3">Core Technologies</h4>
               <div className="flex flex-wrap gap-2">
-                {["Next.js", ".NET", "JavaScript", "Python", "C#", "Java"].map((skill) => (
+                {["AWS", "Golang", "PostgreSQL", "Next.js", ".NET", "JavaScript", "Python", "C#", "Java"].map((skill) => (
                   <Badge key={skill} variant="secondary">{skill}</Badge>
                 ))}
               </div>

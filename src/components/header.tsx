@@ -32,7 +32,7 @@ export function Header() {
               </a>
             </Button>
             <Button size="sm" className="hidden sm:flex" asChild>
-              <a href="https://drive.google.com/file/d/1xCpTlximEhrBQqRudQaplY8tkXzLPMEh/view?usp=sharing" download="ThanhVinhTong_Resume.pdf">
+              <a href="https://drive.google.com/file/d/1ZnbU-fXHLx4ilDXbn5pgU6IBI0YVbxnU/view?usp=sharing" download="ThanhVinhTong_Resume.pdf">
                 <span className="mr-2"><FaDownload size={16} /></span>
                 Download 1-page Resume
               </a>

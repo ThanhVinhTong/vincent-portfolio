@@ -12,39 +12,33 @@ const skillCategories = [
   {
     title: "Backend Development",
     icon: Database,
-    skills: [".Net", "C#", "Python", "MongoDB", "PostgreSQL"]
+    skills: [".Net", "C#", "Python", "Golang", "Gin"]
   },
   {
-    title: "Tools & Platforms",
+    title: "Database",
+    icon: Database,
+    skills: ["PostgreSQL", "MySQL", "MongoDB"]
+  },
+  {
+    title: "Cloud & DevOps",
     icon: Cloud,
-    skills: ["Git", "Docker", "Vite", "Vercel", "AWS"]
-  },
-  {
-    title: "Other Skills",
-    icon: Palette,
-    skills: ["Problem Solving"]
+    skills: ["AWS", "Docker", "Kubernetes"]
   }
 ];
 
 // Update certifications (formerly soft skills, now Certifications)
 const certifications = [
   {
-    title: "Basics of Machine Learning",
-    issuer: "Codecademy",
-    date: "Date not specified",
-    credentialId: "https://github.com/ThanhVinhTong/Certificates/blob/main/Codecademy's%20Basic%20Machine%20Learning%20Coursework/Certificate.png"
-  },
-  {
-    title: "Computer Vision - Image Basics with OpenCV and Python",
-    issuer: "Coursera",
-    date: "Date not specified",
-    credentialId: "https://github.com/ThanhVinhTong/Certificates/blob/main/Coursera's%20Computer-Vision---Image-Basics-with-OpenCV-and-Python/Coursera_OpenCV_Certificate.jpg"
+    title: "AWS Developer Associate",
+    issuer: "Amazon Web Services",
+    date: "Feb 2026",
+    credentialId: "https://www.credly.com/badges/dcf40059-b515-4312-aab4-f47cc08f48b4/public_url"
   },
   {
     title: "Deep Learning Specialization",
     issuer: "Coursera",
-    date: "Date not specified",
-    credentialId: "https://github.com/ThanhVinhTong/Certificates/blob/main/Coursera's%20Deep%20Learning%20Specialization/ThanhVinhTong_DL_Specialization_Certificate.pdf"
+    date: "Mar 2024",
+    credentialId: "https://www.coursera.org/account/accomplishments/specialization/5ZF39MDLLA26"
   }
 ];
 
@@ -61,20 +55,12 @@ const awards = [
     issuer: "SAMSUNG DISPLAY VIETNAM",
     date: "2023",
     credentialId: "https://github.com/ThanhVinhTong/Certificates/blob/main/SDV's%20Internship%20Award/TongThanhVinh_Award_SamsungDisplayVietnam.pdf"
-  },
-  {
-    title: "2nd place, SVMC Application Development Contest",
-    issuer: "SAMSUNG VIETNAM MOBILE R&D CENTER",
-    date: "2022",
-    credentialId: ""
   }
 ];
 
 export function SkillsQualifications() {
   return (
     <section className="mb-8">
-      <h2 className="mb-6">Skills & Awards</h2>
-      
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Technical Skills */}
         <div className="space-y-6">
@@ -114,6 +100,33 @@ export function SkillsQualifications() {
         </div>
         
         <div className="space-y-6">
+          {/* Certifications */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Award className="h-5 w-5 text-primary" />
+                Certifications
+              </CardTitle>
+            </CardHeader>
+            
+            <CardContent className="space-y-4">
+              {certifications.map((cert, index) => (
+                <div key={index} className="border-l-2 border-primary pl-4">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h4 className="font-medium">{cert.title}</h4>
+                    {cert.credentialId && (
+                      <a href={cert.credentialId} target="_blank" rel="noopener noreferrer" className="text-primary text-xs hover:underline border border-primary px-2 py-1 rounded">
+                        View
+                      </a>
+                    )}
+                  </div>
+                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                  <p className="text-sm text-muted-foreground">{cert.date}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
           {/* Awards */}
           <Card>
             <CardHeader>
@@ -126,21 +139,21 @@ export function SkillsQualifications() {
             <CardContent className="space-y-4">
               {awards.map((award, index) => (
                 <div key={index} className="border-l-2 border-primary pl-4">
-                  <h4 className="font-medium">{award.title}</h4>
-                  <p className="text-sm text-muted-foreground">{award.issuer}</p>
-                  <div className="flex justify-between items-center mt-1">
-                    <p className="text-sm text-muted-foreground">{award.date}</p>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h4 className="font-medium">{award.title}</h4>
                     {award.credentialId && (
-                      <a href={award.credentialId} target="_blank" rel="noopener noreferrer" className="text-primary text-xs hover:underline">
+                      <a href={award.credentialId} target="_blank" rel="noopener noreferrer" className="text-primary text-xs hover:underline border border-primary px-2 py-1 rounded">
                         View
                       </a>
                     )}
                   </div>
+                  <p className="text-sm text-muted-foreground">{award.issuer}</p>
+                  <p className="text-sm text-muted-foreground">{award.date}</p>
                 </div>
               ))}
             </CardContent>
           </Card>
-          
+
           {/* Languages */}
           <Card>
             <CardHeader>
@@ -150,7 +163,7 @@ export function SkillsQualifications() {
             <CardContent className="space-y-3">
               <div className="flex justify-between items-center">
                 <span>English</span>
-                <Badge variant="default">Fluent</Badge>
+                <Badge variant="default">Professional Working Proficiency</Badge>
               </div>
               <div className="flex justify-between items-center">
                 <span>Vietnamese</span>

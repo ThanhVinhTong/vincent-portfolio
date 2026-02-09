@@ -17,15 +17,6 @@ interface FeaturedProject {
 
 const topProjects: FeaturedProject[] = [
   {
-    title: "Tennis Tournament Website",
-    purpose: "Offers compact platform for uploading, visualizing, and sharing tennis match results in small club settings",
-    description: "A Flask-based web application for tracking tennis tournaments, matches, and player data. Users can upload match data (single or CSV), view analytics, and selectively share results with other users.",
-    techStack: ["Flask", "Bootstrap 5", "jQuery", "SQLite"],
-    githubUrl: "https://github.com/ThanhVinhTong/Tennis-Tournament",
-    liveUrl: "",
-    featured: true
-  },
-  {
     title: "VACareerMatching Platform",
     purpose: "Built for the 2025 VAIT (Vietnamese Aussies in IT) application building contest, to foster meaningful professional connections within the Vietnamese-Australian tech community",
     description: "A networking platform with an intuitive swipe-based interface that matches users based on shared career goals and interests, enabling mentorship, collaboration, and peer discovery among participants in the contest.",
@@ -34,6 +25,15 @@ const topProjects: FeaturedProject[] = [
     liveUrl: "",
     featured: true,
     achievement: "Out of the Box for creative frontend/UI design"
+  },
+  {
+    title: "Rate Pulse",
+    purpose: "To deliver a compact and convenience solution for overseas students to track currency exchange rates in real-time",
+    description: "A scalable currency exchange rate tracking platform for investors and overseas students, centralising multiple currency rates from different sources from different countries in a single real-time dashboard.",
+    techStack: ["Golang", "JavaScript", "PostgreSQL", "Gin", "Docker", "Redis", "Kubernetes", "gRPC", "Next.js"],
+    githubUrl: "https://github.com/ThanhVinhTong/rate-pulse",
+    liveUrl: "",
+    featured: true
   },
   {
     title: "Project Nexus",
