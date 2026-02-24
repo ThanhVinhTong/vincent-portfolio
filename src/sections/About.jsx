@@ -50,18 +50,23 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a software engineer currently completing a Master of 
+                I'm a software engineer, graduated from a Master of 
                 Information Technology at UWA, with hands-on experience across 
                 full-stack development, AI, and data engineering. I enjoy 
                 building products that solve real problems and scale reliably.
               </p>
               <p>
-                I’ve worked on medical imaging software and retinal segmentation 
-                at Lions Eye Institute, built defect-detection systems at Samsung 
-                Display Vietnam, and developed large-scale data pipelines at 
-                VNPT-Media. Across projects, I use tools like Next.js, FastAPI, 
-                C#/.NET, Golang, PostgreSQL, and AWS to deliver practical, 
-                high-impact solutions.
+                I work best at the intersection of people and technology. Having 
+                collaborated with clinicians, researchers, and engineers across 
+                research institutes and industry teams, I am comfortable navigating 
+                different perspectives and translating loosely defined problems into 
+                clear, actionable solutions. I value ownership and accountability, 
+                often taking initiative to improve workflows or bridge gaps between 
+                technical and non-technical stakeholders. My experience studying and 
+                working across Vietnam and Australia has strengthened my adaptability, 
+                cultural awareness, and communication style. I approach feedback with 
+                an open mindset, learn quickly from setbacks, and consistently focus on 
+                delivering outcomes that are both technically sound and meaningful to end users.
               </p>
               <p>
                 Outside of coding, I enjoy playing basketball, watching apocalypse 
