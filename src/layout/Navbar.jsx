@@ -7,6 +7,7 @@ const navLinks = [
   { key: "projects", label: "Projects" },
   { key: "experience", label: "Experience" },
   { key: "testimonials", label: "Testimonials" },
+  { key: "certifications", label: "Certifications" },
   { key: "contact", label: "Contact" },
 ]
 
