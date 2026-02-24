@@ -196,6 +196,38 @@
     box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
   }
 
+  @keyframes referral-link-border-pulse {
+    0% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 0%, transparent);
+    }
+    50% {
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-primary) 55%, transparent),
+        0 0 16px color-mix(in srgb, var(--color-primary) 25%, transparent);
+    }
+    100% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 0%, transparent);
+    }
+  }
+
+  .referral-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 9999px;
+    border: 1px solid color-mix(in srgb, var(--color-border) 65%, transparent);
+    padding: 0.2rem 0.55rem;
+    transition: border-color 180ms ease, background-color 180ms ease,
+      color 180ms ease, transform 180ms ease;
+  }
+
+  .referral-link:hover {
+    border-color: color-mix(in srgb, var(--color-primary) 70%, transparent);
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    animation: referral-link-border-pulse 1.2s ease-in-out infinite;
+    transform: translateY(-1px);
+  }
+
   .timeline-glow {
     box-shadow: 0 0 40px
         color-mix(in srgb, var(--color-primary) 35%, transparent),

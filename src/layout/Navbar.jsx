@@ -3,14 +3,17 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  {href: "#about", label: "About"},
-  {href: "#projects", label: "Projects"},
-  {href: "#experience", label: "Experience"},
-  {href: "#testimonials", label: "Testimonials"},
+  // OLD: hash anchor links
+  { key: "home", label: "Home" },
+  // OLD: { key: "about", label: "About" },
+  { key: "projects", label: "Projects" },
+  { key: "experience", label: "Experience" },
+  { key: "testimonials", label: "Testimonials" },
+  { key: "contact", label: "Contact" },
 ]
 
 
-export const Navbar = () => {
+export const Navbar = ({ activeTab, onTabChange }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   
@@ -32,31 +35,38 @@ export const Navbar = () => {
                         z-50`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        <a 
-          href="#" 
+        <button
+          type="button"
+          onClick={() => onTabChange("home")}
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-          PM<span className="text-primary">.</span>
-        </a>
+          Vincent Tong<span className="text-primary">.</span>
+        </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1">
           <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
-            {navLinks.map((link, index) => (
-              <a 
-                key={index} 
-                href={link.href}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+            {navLinks.map((link) => (
+              <button
+                key={link.key}
+                type="button"
+                onClick={() => onTabChange(link.key)}
+                className={`px-4 py-2 text-sm rounded-full transition-colors ${
+                  activeTab === link.key
+                    ? "text-foreground bg-surface"
+                    : "text-muted-foreground hover:text-foreground hover:bg-surface"
+                }`}
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </div>
         </div>
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          {/* OLD: <Button size="sm">Contact Me</Button> */}
+          <Button size="sm" onClick={() => onTabChange("contact")}>Contact Me</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -72,18 +82,30 @@ export const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden glass-strong animate-fade-in">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-            {navLinks.map((link, index) => (
-              <a 
-                key={index} 
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg text-muted-foreground hover:text-foreground py-2"
+            {navLinks.map((link) => (
+              <button
+                key={link.key}
+                type="button"
+                onClick={() => {
+                  onTabChange(link.key);
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`text-left text-lg py-2 transition-colors ${
+                  activeTab === link.key
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
-              </a>
+              </button>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
+            <Button
+              onClick={() => {
+                onTabChange("contact");
+                setIsMobileMenuOpen(false);
+              }}
+            >
               Contact Me
             </Button>
           </div>
