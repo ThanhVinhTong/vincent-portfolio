@@ -107,10 +107,12 @@ export const Hero = ({ onTabChange }) => {
                   Contact Me <ArrowRight className="w-5 h-5"/>
                 </Button>
                 
-                <AnimatedBorderButton>
-                  <Download className="w-5 h-5" />
-                  Download CV
-                </AnimatedBorderButton>
+                <a href="https://drive.google.com/drive/folders/14VVsbRoUwE9oUbp0NkuBWDVhIgTor9S4?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <AnimatedBorderButton>
+                    <Download className="w-5 h-5" />
+                    Download Resume
+                  </AnimatedBorderButton>
+                </a>
               </div>
 
               {/* Social Links */}
