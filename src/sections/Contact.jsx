@@ -49,6 +49,8 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    tel: "",
+    subject: "",
     message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -63,25 +65,60 @@ export const Contact = () => {
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
     try {
-      const subject = encodeURIComponent(
-        `Portfolio Contact from ${formData.name}`
-      );
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      );
-      window.location.href = `mailto:vincent.tong369@gmail.com?subject=${subject}&body=${body}`;
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error(
+          "EmailJS configuration is missing. Please check your .env values."
+        );
+      }
+
+      const currentTime = new Date().toLocaleString("en-AU", {
+        year: "numeric",
+        month: "short",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          service_id: serviceId,
+          template_id: templateId,
+          user_id: publicKey,
+          template_params: {
+            from_name: formData.name,
+            from_email: formData.email,
+            tel: formData.tel,
+            time: currentTime,
+            subject: formData.subject,
+            message: formData.message,
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText || "Failed to send message.");
+      }
 
       setSubmitStatus({
         type: "success",
-        message: "Email draft opened. Please send it from your mail app.",
+        message: "Message sent successfully! I will get back to you soon.",
       });
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", tel: "", subject: "", message: "" });
     } catch (err) {
-      console.error("EmailJS error:", err);
+      console.error("Contact form error:", err);
       setSubmitStatus({
         type: "error",
         message:
-          err?.text || "Failed to send message. Please try again later.",
+          err?.message || "Failed to send message. Please try again later.",
       });
     } finally {
       setIsLoading(false);
@@ -137,19 +174,39 @@ export const Contact = () => {
 
               <div>
                 <label
-                  htmlFor="name"
+                  htmlFor="subject"
                   className="block text-sm font-medium mb-2"
                 >
-                  Title
+                  Subject
                 </label>
                 <input
-                  id="title"
+                  id="subject"
                   type="text"
                   required
-                  placeholder="Your title..."
-                  value={formData.title}
+                  placeholder="Message subject..."
+                  value={formData.subject}
                   onChange={(e) =>
-                    setFormData({ ...formData, title: e.target.value })
+                    setFormData({ ...formData, subject: e.target.value })
+                  }
+                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="tel"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Mobile
+                </label>
+                <input
+                  id="tel"
+                  type="tel"
+                  required
+                  placeholder="+61..."
+                  value={formData.tel}
+                  onChange={(e) =>
+                    setFormData({ ...formData, tel: e.target.value })
                   }
                   className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                 />
@@ -164,6 +221,8 @@ export const Contact = () => {
                   Email
                 </label>
                 <input
+                  id="email"
+                  type="email"
                   required
                   placeholder="your@email.com"
                   value={formData.email}
