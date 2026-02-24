@@ -3,9 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  // OLD: hash anchor links
   { key: "home", label: "Home" },
-  // OLD: { key: "about", label: "About" },
   { key: "projects", label: "Projects" },
   { key: "experience", label: "Experience" },
   { key: "testimonials", label: "Testimonials" },
@@ -20,7 +18,6 @@ export const Navbar = ({ activeTab, onTabChange }) => {
   useEffect(() => {
     const handleScroll = () => {
       const nextIsScrolled = window.scrollY > 50;
-      // OLD: setIsScrolled(window.scrollY > 50)
       setIsScrolled((prev) => (prev === nextIsScrolled ? prev : nextIsScrolled));
     };
 
@@ -65,8 +62,9 @@ export const Navbar = ({ activeTab, onTabChange }) => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          {/* OLD: <Button size="sm">Contact Me</Button> */}
-          <Button size="sm" onClick={() => onTabChange("contact")}>Contact Me</Button>
+          <Button size="sm" onClick={() => onTabChange("contact")}>
+            Contact Me
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}

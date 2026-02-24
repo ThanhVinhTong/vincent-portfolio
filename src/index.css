@@ -46,14 +46,12 @@
 @layer components {
   .glass {
     background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
-    /* OLD: backdrop-filter: blur(16px); */
     backdrop-filter: blur(10px);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
 
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
-    /* OLD: backdrop-filter: blur(24px); */
     backdrop-filter: blur(14px);
     border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
   }
@@ -135,7 +133,6 @@
 
   @media (max-width: 768px) {
     .animate-marquee {
-      /* OLD: animation: marquee 20s linear infinite; */
       animation: marquee 30s linear infinite;
     }
   }
@@ -144,7 +141,6 @@
     .animate-fade-in,
     .animate-float,
     .animate-marquee {
-      /* OLD: animation: ...; */
       animation: none !important;
     }
   }

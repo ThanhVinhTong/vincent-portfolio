@@ -33,12 +33,10 @@ export const Education = () => {
           </p>
         </div>
 
-        {/* OLD: className="grid gap-6" */}
         <div className="grid md:grid-cols-2 gap-6 auto-rows-fr">
           {educationItems.map((item, idx) => (
             <article
               key={idx}
-              /* OLD: className="glass rounded-2xl p-6 border border-primary/30 animate-fade-in" */
               className="glass rounded-2xl p-6 border border-primary/30 animate-fade-in h-full flex flex-col"
               style={{ animationDelay: `${(idx + 1) * 120}ms` }}
             >

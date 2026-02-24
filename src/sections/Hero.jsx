@@ -32,11 +32,10 @@ const skills = [
 ];
 
 export const Hero = ({ onTabChange }) => {
-    const heroParticles = useMemo(
-      () =>
+  const heroParticles = useMemo(
+    () =>
         Array.from(
           {
-            // OLD: length: 30
             length: 18,
           },
           () => ({
@@ -46,11 +45,11 @@ export const Hero = ({ onTabChange }) => {
             driftDelay: `${Math.random() * 5}s`,
           })
         ),
-      []
-    );
+      [],
+  );
 
-    return (
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+  return (
+    <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -63,7 +62,6 @@ export const Hero = ({ onTabChange }) => {
 
         {/* Green Dots */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* OLD: {[...Array(30)].map((_, i) => (...Math.random() styles...))} */}
           {heroParticles.map((particle, i) => (
             <div 
               key={i}
@@ -111,7 +109,6 @@ export const Hero = ({ onTabChange }) => {
 
               {/* CTAs */}
               <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                {/* OLD: <Button size="lg"> */}
                 <Button size="lg" onClick={() => onTabChange?.("contact")}>
                   Contact Me <ArrowRight className="w-5 h-5"/>
                 </Button>
@@ -208,7 +205,6 @@ export const Hero = ({ onTabChange }) => {
         <div
           className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800"
         >
-          {/* OLD: button used onTabChange?.("about") */}
           <a
             href="#about"
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
@@ -218,5 +214,5 @@ export const Hero = ({ onTabChange }) => {
           </a>
         </div>
       </section>
-    );
-  };
+  );
+};

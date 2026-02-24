@@ -1,13 +1,13 @@
 import { useMemo, useState } from "react";
-import { Navbar } from "@/layout/Navbar"
+import { Navbar } from "@/layout/Navbar";
 
-import { Hero } from "@/sections/Hero"
-import { About } from "@/sections/About"
-import { Education } from "@/sections/Education"
-import { Projects } from "@/sections/Projects"
-import { Experience } from "@/sections/Experience"
-import { Testimonials } from "@/sections/Testimonials"
-import { Contact } from "@/sections/Contact"
+import { Hero } from "@/sections/Hero";
+import { About } from "@/sections/About";
+import { Education } from "@/sections/Education";
+import { Projects } from "@/sections/Projects";
+import { Experience } from "@/sections/Experience";
+import { Testimonials } from "@/sections/Testimonials";
+import { Contact } from "@/sections/Contact";
 
 function App() {
   const [activeTab, setActiveTab] = useState("home");
@@ -24,7 +24,6 @@ function App() {
         return <Contact />;
       case "home":
       default:
-        // OLD: return <Hero onTabChange={setActiveTab} />;
         return (
           <>
             <Hero onTabChange={setActiveTab} />
@@ -37,21 +36,12 @@ function App() {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
-      {/* OLD: <Navbar /> */}
       <Navbar activeTab={activeTab} onTabChange={setActiveTab} />
       <main>
-        {/* OLD:
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Testimonials />
-        <Contact />
-        */}
         {activeSection}
       </main>
     </div>
   );
 }
 
-export default App
+export default App;
