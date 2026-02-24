@@ -6,29 +6,23 @@ import { ArrowRight, Download, ChevronDown } from 'lucide-react';
 import githubIcon from "@/assets/github.svg";
 import linkedinIcon from "@/assets/linkedin.svg";
 
-const skills = [
-  "React.js",
-  "Next.js",
-  "JavaScript",
-  "HTML/CSS",
-  "Tailwind CSS",
-  ".Net",
-  "C#",
-  "Python",
-  "Golang",
-  "Gin",
-  "Selenium",
-  "FastAPI",
-  "Flask",
-  "PostgreSQL",
-  "MySQL",
-  "MongoDB",
-  "AWS",
-  "Docker",
-  "Kubernetes",
-  "Git",
-  "GitHub Actions",
-  "CI/CD",
+const skillGroups = [
+  {
+    title: "Frontend Development",
+    skills: ["React.js", "Next.js", "JavaScript", "HTML/CSS", "Tailwind CSS"],
+  },
+  {
+    title: "Backend Development",
+    skills: [".Net", "C#", "Golang", "Gin", "Python", "Selenium", "FastAPI", "Flask", "Node.js"],
+  },
+  {
+    title: "Database",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase", "RDS"],
+  },
+  {
+    title: "Cloud & DevOps",
+    skills: ["AWS", "DigitalOcean", "Docker", "Kubernetes", "Git", "GitHub Actions", "Vercel", "Render"],
+  },
 ];
 
 export const Hero = ({ onTabChange }) => {
@@ -182,22 +176,31 @@ export const Hero = ({ onTabChange }) => {
             <p className="text-sm text-muted-foreground mb-6 text-center">
               Technologies I work with
             </p>
-            <div className="relative overflow-hidden">
-              <div
-                className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10"
-              />
-              <div
-                className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10"
-              />
-              <div className="flex animate-marquee">
-                {[...skills, ...skills].map((skill, idx) => (
-                  <div key={idx} className="flex-shrink-0 px-8 py-4">
-                    <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                      {skill}
-                    </span>
+            <div className="grid md:grid-cols-2 gap-4">
+              {skillGroups.map((group, idx) => (
+                <div
+                  key={group.title}
+                  className="group glass rounded-2xl p-5 border border-border/50 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/5 hover:shadow-[0_0_30px_rgba(32,178,166,0.2)]"
+                  style={{
+                    animation: `float ${3.6 + (idx % 3) * 0.8}s ease-in-out infinite`,
+                    animationDelay: `${idx * 0.45}s`,
+                  }}
+                >
+                  <h3 className="text-sm uppercase tracking-wider text-primary mb-3 text-center transition-colors duration-300 group-hover:text-primary-foreground">
+                    {group.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {group.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 rounded-full bg-surface text-xs font-medium text-muted-foreground border border-border/50 transition-all duration-300 group-hover:border-primary/40 group-hover:text-foreground"
+                      >
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
