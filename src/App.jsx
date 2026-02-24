@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Navbar } from "@/layout/Navbar";
 import { Footer } from "@/layout/Footer";
 
@@ -13,6 +13,10 @@ import { Contact } from "@/sections/Contact";
 
 function App() {
   const [activeTab, setActiveTab] = useState("home");
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [activeTab]);
 
   const activeSection = useMemo(() => {
     switch (activeTab) {
