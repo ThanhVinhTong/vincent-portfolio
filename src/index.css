@@ -46,13 +46,15 @@
 @layer components {
   .glass {
     background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
-    backdrop-filter: blur(16px);
+    /* OLD: backdrop-filter: blur(16px); */
+    backdrop-filter: blur(10px);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
 
   .glass-strong {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
-    backdrop-filter: blur(24px);
+    /* OLD: backdrop-filter: blur(24px); */
+    backdrop-filter: blur(14px);
     border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
   }
 
@@ -73,12 +75,14 @@
     from {
       opacity: 0;
       transform: translateY(20px);
-      filter: blur(10px);
+      /* filter: blur(10px); */
+      filter: none;
     }
     to {
       opacity: 1;
       transform: translateY(0);
-      filter: blur(0);
+      /* filter: blur(0); */
+      filter: none;
     }
   }
 
@@ -127,6 +131,22 @@
 
   .animate-marquee {
     animation: marquee 20s linear infinite;
+  }
+
+  @media (max-width: 768px) {
+    .animate-marquee {
+      /* OLD: animation: marquee 20s linear infinite; */
+      animation: marquee 30s linear infinite;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-float,
+    .animate-marquee {
+      /* OLD: animation: ...; */
+      animation: none !important;
+    }
   }
 
   .animation-delay-100 {

@@ -1,5 +1,6 @@
 import {Button} from '@/components/Button';
 import {AnimatedBorderButton} from '@/components/AnimatedBorderButton'
+import { useMemo } from "react";
 
 import { ArrowRight, Download, ChevronDown } from 'lucide-react';
 import githubIcon from "@/assets/github.svg";
@@ -31,6 +32,23 @@ const skills = [
 ];
 
 export const Hero = () => {
+    const heroParticles = useMemo(
+      () =>
+        Array.from(
+          {
+            // OLD: length: 30
+            length: 18,
+          },
+          () => ({
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            driftDuration: `${15 + Math.random() * 20}s`,
+            driftDelay: `${Math.random() * 5}s`,
+          })
+        ),
+      []
+    );
+
     return (
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
@@ -45,15 +63,17 @@ export const Hero = () => {
 
         {/* Green Dots */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(30)].map((_, i) => (
+          {/* OLD: {[...Array(30)].map((_, i) => (...Math.random() styles...))} */}
+          {heroParticles.map((particle, i) => (
             <div 
+              key={i}
               className="absolute w-1.5 h-1.5 rounded-full opacity-60" 
               style={{
                 backgroundColor: "#20B2A6",
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 5}s`,
+                left: particle.left,
+                top: particle.top,
+                animation: `slow-drift ${particle.driftDuration} ease-in-out infinite`,
+                animationDelay: particle.driftDelay,
               }}  
             />
           ))}

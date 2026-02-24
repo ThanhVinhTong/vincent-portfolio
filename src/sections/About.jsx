@@ -3,26 +3,27 @@ import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "AI & Computer Vision",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Built and fine-tuned segmentation and defect-detection models for real-world medical imaging and manufacturing use cases.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Full-Stack Delivery",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Shipped end-to-end products with Next.js, .NET, Golang, and PostgreSQL, from secure auth to production-ready APIs.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "Impact in Teams",
+    description:
+      "Collaborated across research and engineering teams to deliver practical tools and measurable outcomes in internships.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Data & Cloud Engineering",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Built scalable data pipelines and cloud-native services using AWS, Docker, and Kubernetes.",
   },
 ];
 
@@ -73,7 +74,8 @@ export const About = () => {
               <p className="text-lg font-medium italic text-foreground">
                 "My mission is to build reliable, user-focused software that
                 creates real-world impact — from intelligent AI systems to
-                scalable full-stack applications."
+                scalable full-stack applications. I always balance cost and
+                performance to deliver the most suitable outcome."
               </p>
             </div>
           </div>
