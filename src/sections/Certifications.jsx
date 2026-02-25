@@ -11,6 +11,12 @@ const credentialGroups = [
         link: "https://www.credly.com/badges/dcf40059-b515-4312-aab4-f47cc08f48b4/public_url",
       },
       {
+        name: "Data Structures & Algorithms Certificate",
+        issuer: "FUTURE SOFTWARE ENGINEER",
+        date: "2025",
+        link: "https://github.com/ThanhVinhTong/Certificates/blob/main/FSEDataStructureAlgorithms/FSE_DataStructuresAlgorithms_Certificate.pdf",
+      },
+      {
         name: "Deep Learning Specialization",
         issuer: "Coursera",
         date: "Mar 2024",
