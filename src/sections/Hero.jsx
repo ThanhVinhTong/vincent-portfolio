@@ -9,7 +9,7 @@ import linkedinIcon from "@/assets/linkedin.svg";
 const skillGroups = [
   {
     title: "Frontend Development",
-    skills: ["React.js", "Next.js", "JavaScript", "HTML/CSS", "Tailwind CSS"],
+    skills: ["React.js", "Next.js", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"],
   },
   {
     title: "Backend Development",
@@ -79,7 +79,7 @@ export const Hero = ({ onTabChange }) => {
               <div className="animate-fade-in">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                   <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                  Software Engineer • Junior Experience
+                  Software Engineer • Full Work Rights
                 </span>
               </div>
 
@@ -95,9 +95,11 @@ export const Hero = ({ onTabChange }) => {
                   </span>
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                  Hi, I'm Vincent Tong — a software engineer specializing in
-                  creating solutions for problems, helping firms gain 
-                  profit through software solutions
+                  Hi, I'm Vincent Tong — a software engineer with experience
+                  across full-stack development, AI/computer vision, and data
+                  engineering, building practical systems that solve real-world
+                  problems. I have full work rights in Australia and I am open
+                  to relocate for the right opportunity.
                 </p>
               </div>
 

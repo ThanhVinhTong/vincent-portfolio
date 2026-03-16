@@ -2,84 +2,89 @@ const experiences = [
   {
     period: "Jul 2025 — Oct 2025",
     role: "Software Engineering Intern",
-    company: "LIONS EYE INSTITUTE • Perth, Australia",
+    company: "Lions Eye Institute • Perth, Australia",
     highlights: [
       {
-        title: "Medical Imaging Desktop Application",
+        title: "Cross-Platform Medical Application",
         detail:
-          "Co-developed a cross-platform medical imaging desktop application using C/C++, Python, Qt, and SQLite, harmonizing retinal microvasculature images from multiple ophthalmic instruments for consistent clinical and research analysis.",
+          "Co-engineered a cross-platform medical application using C++/Qt and Python, designing a robust SQLite persistence layer that centralized data from multiple ophthalmic instruments and reduced batch inspection time by 89%.",
       },
       {
-        title: "Retinal Image Segmentation (Deep Learning)",
+        title: "Retinal Vessel Segmentation Pipeline",
         detail:
-          "Adapted and fine-tuned a pre-trained Attention U-Net (OCTA-500) to segment retinal structures (artery, vein, capillary, FAZ, large vessels), using custom preprocessing, data augmentation, and mIoU-based evaluation across heterogeneous datasets.",
+          "Developed a high-performance image processing pipeline utilizing an Attention U-Net and engineered modular preprocessing and evaluation scripts that achieved 83% mIoU across heterogeneous datasets.",
       },
       {
-        title: "Project Nexus",
+        title: "Internal Project Management Platform",
         detail:
-          "Built a full-stack project and task management platform with secure authentication and persistent storage using Next.js, ASP.NET (C#), and PostgreSQL.",
+          "Developed and implemented an internal full-stack project management platform with Next.js, ASP.NET Core, and PostgreSQL to centralize laboratory resources and schedules while streamlining project tracking for the team.",
       },
     ],
     technologies: [
-      "C/C++",
+      "C++",
       "Python",
       "Qt",
       "SQLite",
       "Attention U-Net",
-      "Deep Learning",
       "Next.js",
-      "ASP.NET (C#)",
+      "ASP.NET Core",
       "PostgreSQL",
     ],
     current: false,
   },
   {
     period: "Aug 2023 — Oct 2023",
-    role: "Intern AI Software Engineer",
-    company: "SAMSUNG DISPLAY VIETNAM • Bac Ninh, Vietnam",
+    role: "AI Software Engineer Intern",
+    company: "Samsung Display Vietnam • Bac Ninh, Vietnam",
     highlights: [
       {
-        title: "Automated Defect Detection (Computer Vision)",
+        title: "Automated Defect Detection",
         detail:
-          "Designed and deployed a custom-trained U-Net model to detect surface defects in display panels, reducing manual quality inspection time by 40% and improving consistency in live production.",
+          "Architected and deployed a U-Net-based computer vision system for display panel defect detection, reducing manual inspection latency by 40% and standardizing production QA benchmarks.",
       },
       {
-        title: "Internal Project Management Application",
+        title: "Internal Tracking Application",
         detail:
-          "Developed an internal WPF desktop application using C#/.NET and SQL Server for real-time project and task tracking, replacing spreadsheet-based workflows and improving operational visibility.",
-      },
-      {
-        title: "Wine-Cart Recommender System",
-        detail:
-          "Developed a backend-driven recommendation system with Selenium data crawling/cleaning, MongoDB persistence, FastAPI REST services, and a Next.js frontend supporting search, filtering, and similar-item recommendations.",
+          "Developed a C#/.NET (WPF) desktop application with a SQL Server backend to centralize resource tracking, replacing fragmented spreadsheet workflows and improving cross-team operational visibility.",
       },
     ],
     technologies: [
       "U-Net",
       "Computer Vision",
-      "Python",
       "WPF",
       "C#/.NET",
       "SQL Server",
-      "Selenium",
-      "MongoDB",
-      "FastAPI",
-      "Next.js",
     ],
     current: false,
   },
   {
     period: "Oct 2022 — Jun 2023",
-    role: "Data Engineer",
-    company: "VNPT-MEDIA • Ha Noi, Vietnam",
+    role: "Data Engineer Associate",
+    company: "VNPT-Media • Hanoi, Vietnam",
     highlights: [
       {
-        title: "Data Platform",
+        title: "Distributed Data Platform",
         detail:
-          "Designed and maintained three batch-processing pipelines analyzing 100+ million telecom records for customer behavior insights and anomaly detection, achieving up to 2x performance gains by migrating legacy Pandas workflows to PySpark.",
+          "Designed and maintained three distributed batch-processing pipelines using PySpark and Hadoop to ingest and transform 100M+ telecom records, achieving a 2x performance gain over legacy Pandas workflows.",
+      },
+      {
+        title: "Recommendation Engine",
+        detail:
+          "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, a ResNet50 model, and Selenium pipelines to eliminate dead-end user experiences by surfacing real-time alternatives for out-of-stock items.",
       },
     ],
-    technologies: ["Python", "PySpark", "Pandas", "Data Pipelines", "Batch Processing"],
+    technologies: [
+      "Python",
+      "PySpark",
+      "Hadoop",
+      "Pandas",
+      "FastAPI",
+      "Next.js",
+      "MongoDB",
+      "Selenium",
+      "ResNet50",
+      "Batch Processing",
+    ],
     current: false,
   },
 ];

@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Rate Pulse",
     description:
-      "Built a cloud-native currency exchange tracking platform aggregating real-time rates from multiple sources into a unified dashboard for investors and overseas students. Implemented high-performance backend services using Golang, Gin, and gRPC, with persistent storage and caching via PostgreSQL and Redis. Deployed a containerized microservices architecture using Docker, Kubernetes, AWS (EKS, RDS, ECR, Route53, Secrets Manager), DigitalOcean, and Supabase.",
+      "Built an end-to-end FX intelligence platform that combines exchange-rate tracking, market-news signals, and personalization into one workflow. Engineered a Go/Gin + gRPC backend with Redis caching, PostgreSQL, a Next.js dashboard, and Python/Selenium data pipelines, then deployed it through GitHub Actions, Docker Hub, and Kubernetes on DigitalOcean.",
     image: "/projects/rate-pulse.jpg",
     tags: [
       "Golang",
@@ -12,23 +12,22 @@ const projects = [
       "gRPC",
       "PostgreSQL",
       "Redis",
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "DigitalOcean",
-      "Supabase",
+      "Next.js",
       "Python",
       "Selenium",
+      "GitHub Actions",
+      "Kubernetes",
+      "DigitalOcean",
     ],
     link: "https://rate-pulse.me",
     github: "https://github.com/ThanhVinhTong/rate-pulse",
   },
   {
-    title: "Book Borrow Platform",
+    title: "Book Borrow",
     description:
-      "A production-ready peer-to-peer platform for book donation, borrowing, and exchange, built to support daily community usage across Western Australia.",
+      "Engineered and delivered a production-ready P2P marketplace for a non-profit book reader community in Western Australia using FastAPI and Next.js, with Stripe payments, Google OAuth, and AWS RDS.",
     image: "/projects/book-borrow.jpg",
-    tags: ["Next.js", "FastAPI", "MySQL", "AWS RDS", "Stripe", "Google OAuth"],
+    tags: ["FastAPI", "Next.js", "Stripe", "Google OAuth", "AWS RDS"],
     link: "https://github.com/ChienAnTu/Bookhive",
     github: "https://github.com/ChienAnTu/Bookhive",
   },
@@ -44,9 +43,9 @@ const projects = [
   {
     title: "Wine-Cart Recommender System",
     description:
-      "A backend-driven recommendation system with Selenium data crawling, MongoDB persistence, and FastAPI services integrated into a searchable Next.js frontend.",
+      "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, a ResNet50 model, and Selenium pipelines to suggest real-time alternatives for out-of-stock items.",
     image: "/projects/wine-cart.jpg",
-    tags: ["Python", "FastAPI", "Selenium", "MongoDB", "Next.js", "REST API"],
+    tags: ["Python", "FastAPI", "Selenium", "MongoDB", "Next.js", "ResNet50"],
     link: "https://wine-cart.vercel.app/",
     github: "https://github.com/ThanhVinhTong/wine-cart-project",
   },

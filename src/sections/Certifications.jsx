@@ -5,9 +5,9 @@ const credentialGroups = [
     title: "Certification",
     entries: [
       {
-        name: "AWS Developer Associate",
+        name: "AWS Certified Developer - Associate",
         issuer: "Amazon Web Services",
-        date: "Feb 2026",
+        date: "Valid: Feb 2026 - Feb 2029",
         link: "https://www.credly.com/badges/dcf40059-b515-4312-aab4-f47cc08f48b4/public_url",
       },
       {
@@ -59,8 +59,8 @@ export const Certifications = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A dedicated overview of certification, recognitions, and measurable
-            achievements from projects and workplaces.
+            A focused overview of certifications, recognitions, and measurable
+            achievements, led by the latest credentials from my current resume.
           </p>
         </div>
 

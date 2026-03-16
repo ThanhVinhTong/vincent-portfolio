@@ -5,25 +5,25 @@ const highlights = [
     icon: Code2,
     title: "AI & Computer Vision",
     description:
-      "Built and fine-tuned segmentation and defect-detection models for real-world medical imaging and manufacturing use cases.",
+      "Built U-Net and Attention U-Net pipelines for retinal imaging and display defect detection in research and manufacturing settings.",
   },
   {
     icon: Rocket,
     title: "Full-Stack Delivery",
     description:
-      "Shipped end-to-end products with Next.js, .NET, Golang, and PostgreSQL, from secure auth to production-ready APIs.",
+      "Delivered operational and user-facing platforms with ASP.NET Core, Next.js, FastAPI, PostgreSQL, and SQL Server.",
   },
   {
     icon: Users,
     title: "Impact in Teams",
     description:
-      "Collaborated across research and engineering teams to deliver practical tools and measurable outcomes in internships.",
+      "Worked across research, manufacturing, and product teams to turn real workflow pain points into maintainable software.",
   },
   {
     icon: Lightbulb,
     title: "Data & Cloud Engineering",
     description:
-      "Built scalable data pipelines and cloud-native services using AWS, Docker, and Kubernetes.",
+      "Built distributed data pipelines with PySpark and Hadoop, then shipped cloud-native systems with Docker, Kubernetes, and GitHub Actions.",
   },
 ];
 
@@ -50,22 +50,25 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a software engineer, graduated from a Master of 
-                Information Technology at UWA, with hands-on experience across 
-                full-stack development, AI, and data engineering. I enjoy 
-                building products that solve real problems and scale reliably.
+                I'm a software engineer who graduated with a Master of
+                Information Technology from UWA, with hands-on experience across
+                full-stack development, AI/computer vision, and data
+                engineering. I enjoy building practical products that solve
+                real problems and scale reliably.
               </p>
               <p>
-                I work best at the intersection of people and technology. Having 
-                collaborated with clinicians, researchers, and engineers across 
-                research institutes and industry teams, I am comfortable navigating 
-                different perspectives and translating loosely defined problems into 
-                clear, actionable solutions. I value ownership and accountability, 
-                often taking initiative to improve workflows or bridge gaps between 
-                technical and non-technical stakeholders. My experience studying and 
-                working across Vietnam and Australia has strengthened my adaptability, 
-                cultural awareness, and communication style. I approach feedback with 
-                an open mindset, learn quickly from setbacks, and consistently focus on 
+                I work best at the intersection of people and technology. Having
+                collaborated with clinicians, researchers, engineers, and
+                stakeholders across research institutes and industry teams, I am
+                comfortable navigating different perspectives and translating
+                loosely defined problems into clear, actionable solutions. I
+                value ownership and accountability, often taking initiative to
+                improve workflows or bridge gaps between technical and
+                non-technical stakeholders. My experience studying and working
+                across Vietnam and Australia has strengthened my adaptability,
+                cultural awareness, and communication style. I approach
+                feedback with an open mindset, learn quickly from setbacks, and
+                consistently focus on
                 delivering outcomes that are both technically sound and meaningful to end users.
               </p>
               <p>
