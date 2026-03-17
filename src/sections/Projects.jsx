@@ -43,9 +43,9 @@ const projects = [
   {
     title: "Wine-Cart Recommender System",
     description:
-      "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, a ResNet50 model, and Selenium pipelines to suggest real-time alternatives for out-of-stock items.",
+      "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, a pretrained model, and Selenium pipelines to suggest real-time alternatives for out-of-stock items.",
     image: "/projects/wine-cart.jpg",
-    tags: ["Python", "FastAPI", "Selenium", "MongoDB", "Next.js", "ResNet50"],
+    tags: ["Python", "FastAPI", "Selenium", "MongoDB", "Next.js", "Pretrained CNNs"],
     link: "https://wine-cart.vercel.app/",
     github: "https://github.com/ThanhVinhTong/wine-cart-project",
   },

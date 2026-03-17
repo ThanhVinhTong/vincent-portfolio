@@ -70,7 +70,7 @@ const experiences = [
       {
         title: "Recommendation Engine",
         detail:
-          "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, a ResNet50 model, and Selenium pipelines to eliminate dead-end user experiences by surfacing real-time alternatives for out-of-stock items.",
+          "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, a Pretrained CNNs model, and Selenium pipelines to eliminate dead-end user experiences by surfacing real-time alternatives for out-of-stock items.",
       },
     ],
     technologies: [
@@ -82,7 +82,7 @@ const experiences = [
       "Next.js",
       "MongoDB",
       "Selenium",
-      "ResNet50",
+      "Pretrained CNNs",
       "Batch Processing",
     ],
     current: false,
