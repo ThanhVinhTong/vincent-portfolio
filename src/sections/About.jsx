@@ -72,9 +72,9 @@ export const About = () => {
                 delivering outcomes that are both technically sound and meaningful to end users.
               </p>
               <p>
-                Outside of coding, I enjoy playing basketball, watching apocalypse 
-                movies, and training with gym/calisthenics. These keep me 
-                disciplined, curious, and energized for long-term growth.
+                Outside of coding, I enjoy gaming — long-time League of Legends player,
+                along with Valorant and Warcraft II — and staying active through gym training
+                and calisthenics. These keep my mind sharp, fresh and body strong.
               </p>
             </div>
 

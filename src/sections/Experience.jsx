@@ -12,7 +12,7 @@ const experiences = [
       {
         title: "Retinal Vessel Segmentation Pipeline",
         detail:
-          "Developed a high-performance image processing pipeline utilizing an Attention U-Net and engineered modular preprocessing and evaluation scripts that achieved 83% mIoU across heterogeneous datasets.",
+          "Developed a high-performance image processing pipeline utilizing a pretrained model; engineered modular preprocessing and evaluation scripts that achieved 83% accuracy for retinal vessel segmentation across heterogeneous datasets.",
       },
       {
         title: "Internal Project Management Platform",
@@ -25,7 +25,7 @@ const experiences = [
       "Python",
       "Qt",
       "SQLite",
-      "Attention U-Net",
+      "Pretrained Model",
       "Next.js",
       "ASP.NET Core",
       "PostgreSQL",
@@ -34,13 +34,13 @@ const experiences = [
   },
   {
     period: "Aug 2023 — Oct 2023",
-    role: "AI Software Engineer Intern",
-    company: "Samsung Display Vietnam • Bac Ninh, Vietnam",
+    role: "Software Engineer Intern",
+    company: "Samsung Corporation • Bac Ninh, Vietnam",
     highlights: [
       {
         title: "Automated Defect Detection",
         detail:
-          "Architected and deployed a U-Net-based computer vision system for display panel defect detection, reducing manual inspection latency by 40% and standardizing production QA benchmarks.",
+          "Architected and deployed a pretrained model computer vision system for display panel defect detection, reducing manual inspection latency by 40% and standardizing production QA benchmarks.",
       },
       {
         title: "Internal Tracking Application",
@@ -49,7 +49,7 @@ const experiences = [
       },
     ],
     technologies: [
-      "U-Net",
+      "Pretrained Model",
       "Computer Vision",
       "WPF",
       "C#/.NET",
@@ -60,7 +60,7 @@ const experiences = [
   {
     period: "Oct 2022 — Jun 2023",
     role: "Data Engineer Associate",
-    company: "VNPT-Media • Hanoi, Vietnam",
+    company: "Vietnam Posts and Telecommunications Group • Hanoi, Vietnam",
     highlights: [
       {
         title: "Distributed Data Platform",
@@ -70,7 +70,7 @@ const experiences = [
       {
         title: "Recommendation Engine",
         detail:
-          "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, a Pretrained CNNs model, and Selenium pipelines to eliminate dead-end user experiences by surfacing real-time alternatives for out-of-stock items.",
+          "Engineered a full-stack recommendation engine (FastAPI, Next.js, MongoDB) using Selenium pipelines to eliminate dead-end user experiences by delivering real-time alternatives for out-of-stock items, directly increasing user retention and recapturing potential lost revenue.",
       },
     ],
     technologies: [
@@ -82,7 +82,6 @@ const experiences = [
       "Next.js",
       "MongoDB",
       "Selenium",
-      "Pretrained CNNs",
       "Batch Processing",
     ],
     current: false,

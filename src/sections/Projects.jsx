@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Rate Pulse",
     description:
-      "Built an end-to-end FX intelligence platform that combines exchange-rate tracking, market-news signals, and personalization into one workflow. Engineered a Go/Gin + gRPC backend with Redis caching, PostgreSQL, a Next.js dashboard, and Python/Selenium data pipelines, then deployed it through GitHub Actions, Docker Hub, and Kubernetes on DigitalOcean.",
+      "Built an end-to-end platform that unifies exchange-rate tracking, market-news intelligence, and user personalization into a single workflow. Engineered a high-concurrency Go (Gin) + gRPC/Protobuf backend with Redis caching and Paseto/JWT-secured service workflows, a Next.js dashboard for real-time monitoring and AI insight cards, a Python + Selenium multi-source scraping engine (Yahoo Finance, global commodities), and automated CI/CD via GitHub Actions and Docker Hub deployed on Kubernetes (DigitalOcean).",
     image: "/projects/rate-pulse.jpg",
     tags: [
       "Golang",
@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Book Borrow",
     description:
-      "Engineered and delivered a production-ready P2P marketplace for a non-profit book reader community in Western Australia using FastAPI and Next.js, with Stripe payments, Google OAuth, and AWS RDS.",
+      "Engineered and delivered a production-ready P2P marketplace (Aug 2025 – Nov 2025, Team of 8) for a non-profit book reader organisation in Western Australia, utilizing FastAPI and Next.js with integrated Stripe payments, Google OAuth, and AWS RDS.",
     image: "/projects/book-borrow.jpg",
     tags: ["FastAPI", "Next.js", "Stripe", "Google OAuth", "AWS RDS"],
     link: "https://github.com/ChienAnTu/Bookhive",
