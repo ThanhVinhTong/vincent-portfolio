@@ -1,7 +1,7 @@
-import { Button } from '@/components/Button';
-import { AnimatedBorderButton } from '@/components/AnimatedBorderButton'
+import { Button } from "@/components/Button";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
-import { ArrowRight, Download, ChevronDown } from 'lucide-react';
+import { ArrowRight, Download, ChevronDown } from "lucide-react";
 import githubIcon from "@/assets/github.svg";
 import linkedinIcon from "@/assets/linkedin.svg";
 
@@ -99,17 +99,19 @@ export const Hero = ({ onTabChange }) => {
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
 
-              <a href="/VincentTong_Resume.pdf" download="VincentTong_Resume.pdf">
-                <AnimatedBorderButton>
-                  <Download className="w-5 h-5" />
-                  Download Resume
-                </AnimatedBorderButton>
-              </a>
+              <AnimatedBorderButton
+                as="a"
+                href="/VincentTong_Resume.pdf"
+                download="VincentTong_Resume.pdf"
+              >
+                <Download className="w-5 h-5" />
+                Download Resume
+              </AnimatedBorderButton>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-              <span className='text-sm text-muted-foreground'>Follow me: </span>
+              <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: githubIcon, label: "GitHub", href: "https://github.com/ThanhVinhTong" },
                 { icon: linkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/thanh-vinh-tong-b02b5016b/" },
@@ -130,9 +132,9 @@ export const Hero = ({ onTabChange }) => {
             {/* Profile Image */}
             <div className="relative max-w-md mx-auto">
               <div
-                className="absolute inset-0 
-                rounded-3xl bg-gradient-to-br 
-                from-primary/30 via-transparent 
+                className="absolute inset-0
+                rounded-3xl bg-gradient-to-br
+                from-primary/30 via-transparent
                 to-primary/10 blur-2xl animate-pulse"
               />
               <div className="relative glass rounded-3xl p-2 glow-border">

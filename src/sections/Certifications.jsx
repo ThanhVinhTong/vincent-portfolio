@@ -1,8 +1,8 @@
-import { ArrowUpRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const credentialGroups = [
   {
-    title: "Certification",
+    title: "Certifications",
     entries: [
       {
         name: "AWS Certified Developer - Associate",
@@ -34,7 +34,7 @@ const credentialGroups = [
         link: "https://github.com/ThanhVinhTong/Certificates/blob/main/VAIT%20Hackathon%20Award/thanhvinhtong_vait_hackathon_2025_out_of_the_box.pdf",
       },
       {
-        name: "Best Trainee in Samsung Display Vietnam's internship",
+        name: "Best Trainee in Samsung Display Vietnam internship",
         issuer: "SAMSUNG DISPLAY VIETNAM",
         date: "2023",
         link: "https://github.com/ThanhVinhTong/Certificates/blob/main/SDV's%20Internship%20Award/TongThanhVinh_Award_SamsungDisplayVietnam.pdf",
@@ -45,54 +45,44 @@ const credentialGroups = [
 
 export const Certifications = () => {
   return (
-    <section id="credentials" className="py-32 relative overflow-hidden">
-      <div className="absolute top-1/4 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 bg-highlight/5 rounded-full blur-3xl" />
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Certification &
-            <span className="font-serif italic font-normal text-white">
-              {" "}
-              achievements.
-            </span>
+    <section id="credentials" className="section-shell border-b border-border/70">
+      <div className="container mx-auto px-6">
+        <div className="mb-12 max-w-3xl">
+          <div className="section-kicker">Credentials</div>
+          <h2 className="section-title-sm mt-4">
+            Certifications and{" "}
+            <span className="font-serif text-primary">recognition.</span>
           </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A focused overview of certifications, recognitions, and measurable
-            achievements, led by the latest credentials from my current resume.
+          <p className="section-copy mt-4">
+            A focused overview of current credentials and awards that support the
+            engineering work shown across the portfolio.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 auto-rows-fr">
-          {credentialGroups.map((group, idx) => (
-            <article
-              key={idx}
-              className="glass rounded-2xl p-6 border border-primary/30 animate-fade-in h-full"
-              style={{ animationDelay: `${(idx + 1) * 120}ms` }}
-            >
-              <h3 className="text-xl font-semibold mb-4">{group.title}</h3>
-              <div className="space-y-4">
-                {group.entries.map((entry, entryIdx) => (
-                  <div
-                    key={entryIdx}
-                    className="rounded-xl border border-border/60 bg-surface/40 p-4"
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <h4 className="font-medium text-foreground">{entry.name}</h4>
+        <div className="grid auto-rows-fr gap-6 md:grid-cols-2">
+          {credentialGroups.map((group) => (
+            <article key={group.title} className="panel h-full p-5 md:p-6">
+              <h3 className="text-xl font-semibold">{group.title}</h3>
+              <div className="mt-5 divide-y divide-border">
+                {group.entries.map((entry) => (
+                  <div key={entry.name} className="py-4 first:pt-0 last:pb-0">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h4 className="font-medium text-foreground">{entry.name}</h4>
+                        <p className="mt-1 text-sm text-muted-foreground">{entry.issuer}</p>
+                        <p className="mt-1 text-xs text-muted-foreground">{entry.date}</p>
+                      </div>
                       <a
                         href={entry.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline whitespace-nowrap"
+                        className="icon-button h-9 w-9 shrink-0"
+                        aria-label={`View ${entry.name}`}
+                        title="View credential"
                       >
-                        View <ArrowUpRight className="w-4 h-4" />
+                        <ExternalLink className="h-4 w-4" />
                       </a>
                     </div>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {entry.issuer}
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">{entry.date}</p>
                   </div>
                 ))}
               </div>

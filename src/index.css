@@ -3,43 +3,72 @@
 @theme {
   --color-background: #0f1418;
   --color-foreground: #f0f2f5;
-
   --color-card: #141a1f;
-
+  --color-surface: #1a2329;
+  --color-surface-strong: #1f2830;
   --color-primary: #20b2a6;
   --color-primary-foreground: #ffffff;
-
   --color-secondary: #1f2830;
   --color-secondary-foreground: #20b2a6;
-
   --color-muted: #252e37;
   --color-muted-foreground: #7a8491;
-
   --color-border: #242b32;
-
-  --radius: 0.75rem;
-
   --color-highlight: #f5a623;
-  --color-surface: #1a2329;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --radius: 0.5rem;
 }
 
 @layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    background:
+      linear-gradient(rgba(240, 242, 245, 0.026) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(240, 242, 245, 0.026) 1px, transparent 1px),
+      var(--color-background);
+    background-size: 64px 64px;
+    color: var(--color-foreground);
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0;
+  }
+
+  button,
+  a,
+  input,
+  textarea {
+    font: inherit;
   }
 
   button {
     cursor: pointer;
   }
 
-  body {
-    background-color: var(--color-background);
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary) 35%, transparent);
     color: var(--color-foreground);
-    font-family: "Inter", sans-serif;
   }
 
   .font-serif {
-    font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
   }
 }
 
@@ -62,9 +91,120 @@
   }
 
   .glow-border {
-    box-shadow: 0 0 20px
-        color-mix(in srgb, var(--color-primary) 20%, transparent),
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent),
       inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  }
+
+  .panel {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .panel-soft {
+    background: color-mix(in srgb, var(--color-surface) 78%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-border) 86%, transparent);
+    border-radius: var(--radius);
+  }
+
+  .section-shell {
+    position: relative;
+    padding-block: 6rem;
+    overflow: hidden;
+  }
+
+  .section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .section-kicker::before {
+    content: "";
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 9999px;
+    background: var(--color-primary);
+    box-shadow: 0 0 16px color-mix(in srgb, var(--color-primary) 55%, transparent);
+  }
+
+  .section-title {
+    color: var(--color-foreground);
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+
+  .section-title-sm {
+    color: var(--color-foreground);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: 0;
+  }
+
+  .section-copy {
+    color: var(--color-muted-foreground);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-muted-foreground);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .icon-button {
+    display: inline-flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-surface) 72%, transparent);
+    color: var(--color-muted-foreground);
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease,
+      color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .icon-button:hover {
+    border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
+    background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+    color: var(--color-primary);
+    transform: translateY(-1px);
+  }
+
+  .technical-grid {
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--color-border) 55%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--color-border) 55%, transparent) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .focus-ring {
+    outline: none;
+  }
+
+  .focus-ring:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary);
   }
 }
 
@@ -72,15 +212,11 @@
   @keyframes fade-in {
     from {
       opacity: 0;
-      transform: translateY(20px);
-      /* filter: blur(10px); */
-      filter: none;
+      transform: translateY(16px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
-      /* filter: blur(0); */
-      filter: none;
     }
   }
 
@@ -110,39 +246,21 @@
     }
   }
 
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
+  @keyframes border-scan {
+    from {
+      stroke-dashoffset: 400;
     }
-    100% {
-      transform: translateX(-50%);
+    to {
+      stroke-dashoffset: -550;
     }
   }
 
   .animate-fade-in {
-    animation: fade-in 0.8s ease-out both;
+    animation: fade-in 0.55s ease-out both;
   }
 
   .animate-float {
     animation: float 4s ease-in-out infinite;
-  }
-
-  .animate-marquee {
-    animation: marquee 20s linear infinite;
-  }
-
-  @media (max-width: 768px) {
-    .animate-marquee {
-      animation: marquee 30s linear infinite;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .animate-fade-in,
-    .animate-float,
-    .animate-marquee {
-      animation: none !important;
-    }
   }
 
   .animation-delay-100 {
@@ -173,60 +291,29 @@
     animation-delay: 800ms;
   }
 
-  @keyframes animated-border {
-    0% {
-      stroke-dashoffset: 400;
-    }
-    100% {
-      stroke-dashoffset: -550;
-    }
-  }
-
   .group:hover .animated-border-path {
-    animation: animated-border 1.5s linear infinite;
+    animation: border-scan 1.5s linear infinite;
   }
 
   .animated-border:hover {
-    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
-  }
-
-  @keyframes referral-link-border-pulse {
-    0% {
-      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 0%, transparent);
-    }
-    50% {
-      box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-primary) 55%, transparent),
-        0 0 16px color-mix(in srgb, var(--color-primary) 25%, transparent);
-    }
-    100% {
-      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary) 0%, transparent);
-    }
-  }
-
-  .referral-link {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    border-radius: 9999px;
-    border: 1px solid color-mix(in srgb, var(--color-border) 65%, transparent);
-    padding: 0.2rem 0.55rem;
-    transition: border-color 180ms ease, background-color 180ms ease,
-      color 180ms ease, transform 180ms ease;
-  }
-
-  .referral-link:hover {
-    border-color: color-mix(in srgb, var(--color-primary) 70%, transparent);
     background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
-    animation: referral-link-border-pulse 1.2s ease-in-out infinite;
-    transform: translateY(-1px);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--color-primary) 18%, transparent);
   }
 
   .timeline-glow {
-    box-shadow: 0 0 40px
-        color-mix(in srgb, var(--color-primary) 35%, transparent),
-      0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
+    box-shadow:
+      0 0 28px color-mix(in srgb, var(--color-primary) 30%, transparent),
+      0 0 56px color-mix(in srgb, var(--color-primary) 18%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.001ms !important;
+    }
   }
 }

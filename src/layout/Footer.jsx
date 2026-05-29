@@ -4,67 +4,91 @@ const footerTabs = [
   { key: "home", label: "Home" },
   { key: "projects", label: "Projects" },
   { key: "experience", label: "Experience" },
-  { key: "testimonials", label: "Testimonials" },
-  { key: "certifications", label: "Certifications" },
+  { key: "testimonials", label: "References" },
+  { key: "certifications", label: "Credentials" },
   { key: "contact", label: "Contact" },
+];
+
+const professionalLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/thanh-vinh-tong-b02b5016b/",
+    icon: Linkedin,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/ThanhVinhTong",
+    icon: Github,
+  },
+];
+
+const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/thvinh.tong/",
+    icon: Instagram,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/tongthanh.vinh.7",
+    icon: Facebook,
+  },
 ];
 
 export const Footer = ({ activeTab, onTabChange }) => {
   return (
-    <footer className="relative border-t border-border/70 bg-card/50">
+    <footer className="border-t border-border/70 bg-card/70">
       <div className="container mx-auto px-6 py-10">
-        <div className="grid gap-8 md:grid-cols-[1.15fr_0.75fr_1.1fr]">
-          {/* Left: Summary + Contact */}
+        <div className="grid gap-8 md:grid-cols-[1.1fr_0.75fr_1fr]">
           <div className="space-y-4">
             <button
               type="button"
               onClick={() => onTabChange("home")}
-              className="text-lg font-semibold tracking-tight hover:text-primary transition-colors"
+              className="focus-ring rounded-md text-lg font-semibold tracking-tight transition-colors hover:text-primary"
             >
               Vincent Tong<span className="text-primary">.</span>
             </button>
-            <p className="text-sm text-muted-foreground max-w-sm">
-              Software engineer building reliable, practical solutions across
-              full-stack development, AI, and cloud systems.
+            <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+              Software engineer building reliable full-stack, AI, data, and cloud
+              systems for practical workflows.
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">
               <a
                 href="mailto:vincent.tong369@gmail.com"
-                className="flex items-center gap-2 hover:text-primary transition-colors"
+                className="flex items-center gap-2 transition-colors hover:text-primary"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="h-4 w-4" />
                 Business: vincent.tong369@gmail.com
               </a>
               <a
                 href="mailto:vinhtongthanh57@gmail.com"
-                className="flex items-center gap-2 hover:text-primary transition-colors"
+                className="flex items-center gap-2 transition-colors hover:text-primary"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="h-4 w-4" />
                 Personal: vinhtongthanh57@gmail.com
               </a>
               <a
                 href="tel:+61481789234"
-                className="flex items-center gap-2 hover:text-primary transition-colors"
+                className="flex items-center gap-2 transition-colors hover:text-primary"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="h-4 w-4" />
                 +61 481 789 234
               </a>
             </div>
           </div>
 
-          {/* Middle: Quick Links */}
-          <div className="space-y-2">
-            <h3 className="text-sm uppercase tracking-wider text-primary">Quick Links</h3>
-            <div className="flex flex-col gap-1">
+          <div>
+            <h3 className="text-sm font-medium text-primary">Navigation</h3>
+            <div className="mt-3 flex flex-col gap-1">
               {footerTabs.map((tab) => (
                 <button
                   key={tab.key}
                   type="button"
                   onClick={() => onTabChange(tab.key)}
-                  className={`text-left text-sm leading-6 transition-colors ${
+                  className={`focus-ring rounded-md py-1 text-left text-sm leading-6 transition-colors ${
                     activeTab === tab.key
-                      ? "text-foreground underline underline-offset-4"
-                      : "text-muted-foreground hover:text-foreground hover:underline hover:underline-offset-4"
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {tab.label}
@@ -73,71 +97,48 @@ export const Footer = ({ activeTab, onTabChange }) => {
             </div>
           </div>
 
-          {/* Right: Connect */}
-          <div className="space-y-4 md:justify-self-end">
+          <div className="space-y-5 md:justify-self-end">
             <div>
-              <h3 className="font-medium text-primary uppercase tracking-wider">Connect With Me</h3>
-              <p className="text-sm text-muted-foreground mt-1">
-                Open to full-time engineering opportunities, contract projects,
-                and relocation for the right role.
-              </p>
+              <h3 className="text-sm font-medium text-primary">Professional profiles</h3>
+              <div className="mt-3 flex flex-wrap gap-3">
+                {professionalLinks.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <item.icon className="h-4 w-4" />
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             </div>
 
-            <div className="space-y-3">
-              <div>
-                <h4 className="text-sm uppercase tracking-wider text-primary mb-2">
-                  Professional Profiles
-                </h4>
-                <div className="flex flex-wrap gap-4">
+            <div>
+              <h3 className="text-sm font-medium text-primary">Social</h3>
+              <div className="mt-3 flex flex-wrap gap-3">
+                {socialLinks.map((item) => (
                   <a
-                    href="https://www.linkedin.com/in/thanh-vinh-tong-b02b5016b/"
+                    key={item.label}
+                    href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
                   >
-                    <Linkedin className="w-4 h-4" />
-                    LinkedIn
+                    <item.icon className="h-4 w-4" />
+                    {item.label}
                   </a>
-                  <a
-                    href="https://github.com/ThanhVinhTong"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    GitHub
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-sm uppercase tracking-wider text-primary mb-2">
-                  Daily Life & Social
-                </h4>
-                <div className="flex flex-wrap gap-4">
-                  <a
-                    href="https://www.instagram.com/thvinh.tong/"
-                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Instagram className="w-4 h-4" />
-                    Instagram
-                  </a>
-                  <a
-                    href="https://www.facebook.com/tongthanh.vinh.7"
-                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Facebook className="w-4 h-4" />
-                    Facebook
-                  </a>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-border/50">
+        <div className="mt-8 border-t border-border/70 pt-6">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Vincent Tong. All rights reserved.
+            Copyright {new Date().getFullYear()} Vincent Tong. All rights reserved.
           </p>
         </div>
       </div>

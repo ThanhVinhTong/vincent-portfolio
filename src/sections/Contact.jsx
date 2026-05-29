@@ -1,19 +1,25 @@
 import {
+  AlertCircle,
+  CheckCircle,
+  Github,
+  Linkedin,
   Mail,
   Phone,
-  Linkedin,
-  Github,
   Send,
-  CheckCircle,
-  AlertCircle,
 } from "lucide-react";
-import { Button } from "@/components/Button";
 import { useState } from "react";
+import { Button } from "@/components/Button";
 
 const contactInfo = [
   {
     icon: Mail,
-    label: "Personal Email",
+    label: "Business email",
+    value: "vincent.tong369@gmail.com",
+    href: "mailto:vincent.tong369@gmail.com",
+  },
+  {
+    icon: Mail,
+    label: "Personal email",
     value: "vinhtongthanh57@gmail.com",
     href: "mailto:vinhtongthanh57@gmail.com",
   },
@@ -22,12 +28,6 @@ const contactInfo = [
     label: "Mobile",
     value: "+61 481 789 234",
     href: "tel:+61481789234",
-  },
-  {
-    icon: Mail,
-    label: "Business Email",
-    value: "vincent.tong369@gmail.com",
-    href: "mailto:vincent.tong369@gmail.com",
   },
   {
     icon: Linkedin,
@@ -45,25 +45,32 @@ const contactInfo = [
   },
 ];
 
+const initialFormData = {
+  name: "",
+  email: "",
+  tel: "",
+  subject: "",
+  message: "",
+};
+
 export const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    tel: "",
-    subject: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initialFormData);
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({
-    type: null, // 'success' or 'error'
+    type: null,
     message: "",
   });
+
+  const updateField = (field, value) => {
+    setFormData((current) => ({ ...current, [field]: value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setIsLoading(true);
     setSubmitStatus({ type: null, message: "" });
+
     try {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -71,7 +78,7 @@ export const Contact = () => {
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error(
-          "EmailJS configuration is missing. Please check your .env values."
+          "Contact form is not configured for this environment. Please email me directly."
         );
       }
 
@@ -110,227 +117,186 @@ export const Contact = () => {
 
       setSubmitStatus({
         type: "success",
-        message: "Message sent successfully! I will get back to you soon.",
+        message: "Message sent successfully. I will get back to you soon.",
       });
-      setFormData({ name: "", email: "", tel: "", subject: "", message: "" });
+      setFormData(initialFormData);
     } catch (err) {
       console.error("Contact form error:", err);
       setSubmitStatus({
         type: "error",
-        message:
-          err?.message || "Failed to send message. Please try again later.",
+        message: err?.message || "Failed to send message. Please try again later.",
       });
     } finally {
       setIsLoading(false);
     }
   };
-  return (
-    <section id="contact" className="py-32 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
-      </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Get In Touch
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Let's build{" "}
-            <span className="font-serif italic font-normal text-white">
-              something great.
-            </span>
-          </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            Have a project in mind? I'd love to hear about it. Send me a message
-            and let's discuss how we can work together.
+  return (
+    <section id="contact" className="section-shell">
+      <div className="container mx-auto px-6">
+        <div className="mb-12 grid gap-6 lg:grid-cols-[0.72fr_1fr] lg:items-end">
+          <div>
+            <div className="section-kicker">Contact</div>
+            <h2 className="section-title-sm mt-4">
+              Build something{" "}
+              <span className="font-serif text-primary">practical.</span>
+            </h2>
+          </div>
+          <p className="section-copy max-w-3xl lg:justify-self-end">
+            Open to full-time software engineering roles, contract projects, and
+            relocation for the right opportunity.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  required
-                  placeholder="Your name..."
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                />
+        <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="panel p-5 md:p-6">
+            <form className="grid gap-5" onSubmit={handleSubmit}>
+              <div className="grid gap-5 md:grid-cols-2">
+                <div>
+                  <label htmlFor="name" className="mb-2 block text-sm font-medium">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    required
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={(e) => updateField("name", e.target.value)}
+                    className="focus-ring w-full rounded-lg border border-border bg-surface px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="mb-2 block text-sm font-medium">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    placeholder="your@email.com"
+                    value={formData.email}
+                    onChange={(e) => updateField("email", e.target.value)}
+                    className="focus-ring w-full rounded-lg border border-border bg-surface px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
+                  />
+                </div>
+              </div>
+
+              <div className="grid gap-5 md:grid-cols-2">
+                <div>
+                  <label htmlFor="tel" className="mb-2 block text-sm font-medium">
+                    Mobile
+                  </label>
+                  <input
+                    id="tel"
+                    type="tel"
+                    required
+                    placeholder="+61..."
+                    value={formData.tel}
+                    onChange={(e) => updateField("tel", e.target.value)}
+                    className="focus-ring w-full rounded-lg border border-border bg-surface px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="mb-2 block text-sm font-medium">
+                    Subject
+                  </label>
+                  <input
+                    id="subject"
+                    type="text"
+                    required
+                    placeholder="Message subject"
+                    value={formData.subject}
+                    onChange={(e) => updateField("subject", e.target.value)}
+                    className="focus-ring w-full rounded-lg border border-border bg-surface px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
+                  />
+                </div>
               </div>
 
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Subject
-                </label>
-                <input
-                  id="subject"
-                  type="text"
-                  required
-                  placeholder="Message subject..."
-                  value={formData.subject}
-                  onChange={(e) =>
-                    setFormData({ ...formData, subject: e.target.value })
-                  }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="tel"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Mobile
-                </label>
-                <input
-                  id="tel"
-                  type="tel"
-                  required
-                  placeholder="+61..."
-                  value={formData.tel}
-                  onChange={(e) =>
-                    setFormData({ ...formData, tel: e.target.value })
-                  }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  type="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  placeholder="your@email.com"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
+                <label htmlFor="message" className="mb-2 block text-sm font-medium">
                   Message
                 </label>
                 <textarea
-                  rows={5}
+                  id="message"
+                  rows={6}
                   required
                   value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  placeholder="Your message..."
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
+                  onChange={(e) => updateField("message", e.target.value)}
+                  placeholder="Tell me about the role, project, or team."
+                  className="focus-ring w-full resize-none rounded-lg border border-border bg-surface px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
                 />
               </div>
 
-              <Button
-                className="w-full"
-                type="submit"
-                size="lg"
-                disabled={isLoading}
-              >
+              <Button className="w-full" type="submit" size="lg" disabled={isLoading}>
                 {isLoading ? (
-                  <>Sending...</>
+                  "Sending..."
                 ) : (
                   <>
-                    Send Message
-                    <Send className="w-5 h-5" />
+                    Send message
+                    <Send className="h-5 w-5" />
                   </>
                 )}
               </Button>
 
               {submitStatus.type && (
                 <div
-                  className={`flex items-center gap-3
-                     p-4 rounded-xl ${
-                       submitStatus.type === "success"
-                         ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                         : "bg-red-500/10 border border-red-500/20 text-red-400"
-                     }`}
+                  className={`flex items-start gap-3 rounded-lg border p-4 ${
+                    submitStatus.type === "success"
+                      ? "border-success/25 bg-success/10 text-success"
+                      : "border-error/25 bg-error/10 text-error"
+                  }`}
                 >
                   {submitStatus.type === "success" ? (
-                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                    <CheckCircle className="mt-0.5 h-5 w-5 shrink-0" />
                   ) : (
-                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                    <AlertCircle className="mt-0.5 h-5 w-5 shrink-0" />
                   )}
-                  <p className="text-sm">{submitStatus.message}</p>
+                  <p className="text-sm leading-relaxed">{submitStatus.message}</p>
                 </div>
               )}
             </form>
           </div>
 
-          {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in animation-delay-400">
-            <div className="glass rounded-3xl p-8">
-              <h3 className="text-xl font-semibold mb-6">
-                Contact Information
-              </h3>
-              <div className="space-y-4">
-                {contactInfo.map((item, i) => (
+          <aside className="space-y-6">
+            <div className="panel p-5 md:p-6">
+              <h3 className="text-xl font-semibold">Direct channels</h3>
+              <div className="mt-5 divide-y divide-border">
+                {contactInfo.map((item) => (
                   <a
-                    key={i}
+                    key={`${item.label}-${item.value}`}
                     href={item.href}
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noopener noreferrer" : undefined}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                    className="group flex items-center gap-4 py-4 first:pt-0 last:pb-0"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <item.icon className="w-5 h-5 text-primary" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-primary/25 bg-primary/10 transition-colors group-hover:border-primary/60">
+                      <item.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">
-                        {item.label}
+                    <div className="min-w-0">
+                      <div className="text-sm text-muted-foreground">{item.label}</div>
+                      <div className="truncate font-medium transition-colors group-hover:text-primary">
+                        {item.value}
                       </div>
-                      <div className="font-medium">{item.value}</div>
                     </div>
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* Availability Card */}
-            <div className="glass rounded-3xl p-8 border border-primary/30">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className="font-medium">Currently Available</span>
+            <div className="panel-soft p-5 md:p-6">
+              <div className="flex items-center gap-3">
+                <span className="h-3 w-3 rounded-full bg-primary shadow-[0_0_16px_rgba(32,178,166,0.55)]" />
+                <span className="font-medium">Currently available</span>
               </div>
-              <p className="text-muted-foreground text-sm">
-                I'm currently open to new opportunities and exciting projects,
-                with full work rights in Australia and openness to relocate.
-                Whether you need a full-time engineer or a contract
-                collaborator, let's talk.
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Full work rights in Australia. Open to full-time engineering roles,
+                contract work, and relocation for the right role.
               </p>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </section>

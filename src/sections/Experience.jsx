@@ -1,23 +1,23 @@
 const experiences = [
   {
-    period: "Jul 2025 — Oct 2025",
+    period: "Jul 2025 - Oct 2025",
     role: "Software Engineering Intern",
-    company: "Lions Eye Institute • Perth, Australia",
+    company: "Lions Eye Institute, Perth, Australia",
     highlights: [
       {
-        title: "Cross-Platform Medical Application",
+        title: "Cross-platform medical application",
         detail:
-          "Co-engineered a cross-platform medical application using C++/Qt and Python, designing a robust SQLite persistence layer that centralized data from multiple ophthalmic instruments and reduced batch inspection time by 89%.",
+          "Co-engineered a C++/Qt and Python application with a SQLite persistence layer that centralised data from multiple ophthalmic instruments and reduced batch inspection time by 89%.",
       },
       {
-        title: "Retinal Vessel Segmentation Pipeline",
+        title: "Retinal vessel segmentation pipeline",
         detail:
-          "Developed a high-performance image processing pipeline utilizing a pretrained model; engineered modular preprocessing and evaluation scripts that achieved 83% accuracy for retinal vessel segmentation across heterogeneous datasets.",
+          "Developed preprocessing and evaluation scripts around a pretrained model, reaching 83% accuracy across heterogeneous retinal imaging datasets.",
       },
       {
-        title: "Internal Project Management Platform",
+        title: "Internal project management platform",
         detail:
-          "Developed and implemented an internal full-stack project management platform with Next.js, ASP.NET Core, and PostgreSQL to centralize laboratory resources and schedules, reducing context-switching and streamlining project tracking for the team.",
+          "Built a Next.js, ASP.NET Core, and PostgreSQL platform to centralise laboratory resources, schedules, and project tracking.",
       },
     ],
     technologies: [
@@ -30,47 +30,39 @@ const experiences = [
       "ASP.NET Core",
       "PostgreSQL",
     ],
-    current: false,
   },
   {
-    period: "Aug 2023 — Oct 2023",
+    period: "Aug 2023 - Oct 2023",
     role: "Software Engineer Intern",
-    company: "Samsung Corporation • Bac Ninh, Vietnam",
+    company: "Samsung Corporation, Bac Ninh, Vietnam",
     highlights: [
       {
-        title: "Automated Defect Detection",
+        title: "Automated defect detection",
         detail:
-          "Architected and deployed a pretrained model computer vision system for display panel defect detection, reducing manual inspection latency by 40% and standardizing production QA benchmarks.",
+          "Architected and deployed a pretrained-model computer vision system for display panel defect detection, reducing manual inspection latency by 40%.",
       },
       {
-        title: "Internal Tracking Application",
+        title: "Internal tracking application",
         detail:
-          "Developed a C#/.NET (WPF) desktop application with a SQL Server backend to centralize resource tracking, replacing fragmented spreadsheet workflows and improving cross-team operational visibility.",
+          "Developed a C#/.NET WPF desktop application with a SQL Server backend to replace fragmented spreadsheet workflows.",
       },
     ],
-    technologies: [
-      "Pretrained Model",
-      "Computer Vision",
-      "WPF",
-      "C#/.NET",
-      "SQL Server",
-    ],
-    current: false,
+    technologies: ["Pretrained Model", "Computer Vision", "WPF", "C#/.NET", "SQL Server"],
   },
   {
-    period: "Oct 2022 — Jun 2023",
+    period: "Oct 2022 - Jun 2023",
     role: "Data Engineer Associate",
-    company: "Vietnam Posts and Telecommunications Group • Hanoi, Vietnam",
+    company: "Vietnam Posts and Telecommunications Group, Hanoi, Vietnam",
     highlights: [
       {
-        title: "Distributed Data Platform",
+        title: "Distributed data platform",
         detail:
-          "Built distributed data pipelines using PySpark and Hadoop to process 100M+ telecom records, improving performance 2x and supporting downstream backend services.",
+          "Built PySpark and Hadoop pipelines to process 100M+ telecom records, improving performance 2x and supporting downstream backend services.",
       },
       {
-        title: "Recommendation Engine",
+        title: "Recommendation engine",
         detail:
-          "Engineered a full-stack recommendation engine (FastAPI, Next.js, MongoDB) using Selenium pipelines to eliminate dead-end user experiences by delivering real-time alternatives for out-of-stock items, directly increasing user retention and recapturing potential lost revenue.",
+          "Engineered a FastAPI, Next.js, MongoDB, and Selenium recommendation system that surfaced real-time alternatives for out-of-stock items.",
       },
     ],
     technologies: [
@@ -84,106 +76,65 @@ const experiences = [
       "Selenium",
       "Batch Processing",
     ],
-    current: false,
   },
 ];
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
-      <div
-        className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
-      />
-
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <span
-            className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in"
-          >
-            Career Journey
-          </span>
-          <h2
-            className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground"
-          >
-            Experience that{" "}
-            <span className="font-serif italic font-normal text-white">
-              {" "}
-              speaks volumes.
-            </span>
+    <section id="experience" className="section-shell border-b border-border/70">
+      <div className="container mx-auto px-6">
+        <div className="mb-12 max-w-3xl">
+          <div className="section-kicker">Experience</div>
+          <h2 className="section-title-sm mt-4">
+            Engineering work across{" "}
+            <span className="font-serif text-primary">research and production.</span>
           </h2>
-
-          <p
-            className="text-muted-foreground animate-fade-in animation-delay-200"
-          >
-            A timeline of my growth across software engineering, AI/computer
-            vision, and data engineering in real-world research and production
-            environments.
+          <p className="section-copy mt-4">
+            A timeline of software engineering, AI/computer vision, and data
+            engineering work in real teams and real operating environments.
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
-          <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
+          <div className="timeline-glow absolute bottom-0 left-0 top-0 w-px bg-primary/55 md:left-[13.5rem]" />
 
-          {/* Experience Items */}
-          <div className="space-y-12">
-            {experiences.map((exp, idx) => (
-              <div
-                key={idx}
-                className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
-                style={{ animationDelay: `${(idx + 1) * 150}ms` }}
+          <div className="space-y-6">
+            {experiences.map((exp) => (
+              <article
+                key={`${exp.role}-${exp.company}`}
+                className="relative grid gap-4 pl-8 md:grid-cols-[12rem_1fr] md:gap-8 md:pl-0"
               >
-                {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
-                  {exp.current && (
-                    <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" />
-                  )}
-                </div>
+                <div className="absolute left-0 top-2 h-3 w-3 rounded-full border-4 border-background bg-primary md:left-[13.5rem] md:-translate-x-1/2" />
+                <div className="text-sm text-primary md:pt-1 md:text-right">{exp.period}</div>
 
-                {/* Content */}
-                <div
-                  className={`pl-8 md:pl-0 ${
-                    idx % 2 === 0
-                      ? "md:pr-16 md:text-right"
-                      : "md:col-start-2 md:pl-16"
-                  }`}
-                >
-                  <div
-                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
-                  >
-                    <span className="text-sm text-primary font-medium">
-                      {exp.period}
-                    </span>
-                    <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
-                    <ul className="mt-4 space-y-3 text-sm text-muted-foreground text-left list-disc pl-5">
-                      {exp.highlights.map((item, itemIdx) => (
-                        <li key={itemIdx}>
-                          <span className="text-foreground font-medium">
-                            {item.title}:{" "}
-                          </span>
-                          {item.detail}
-                        </li>
-                      ))}
-                    </ul>
-                    <div
-                      className={`flex flex-wrap gap-2 mt-4 ${
-                        idx % 2 === 0 ? "md:justify-end" : ""
-                      }`}
-                    >
-                      {exp.technologies.map((tech, techIdx) => (
-                        <span
-                          key={techIdx}
-                          className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                <div className="panel p-5 md:p-6">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-xl font-semibold">{exp.role}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground">{exp.company}</p>
                     </div>
                   </div>
+
+                  <div className="mt-5 space-y-4">
+                    {exp.highlights.map((item) => (
+                      <div key={item.title} className="border-l border-primary/45 pl-4">
+                        <h4 className="text-sm font-semibold text-foreground">{item.title}</h4>
+                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                          {item.detail}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {exp.technologies.map((tech) => (
+                      <span key={tech} className="chip text-xs">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>

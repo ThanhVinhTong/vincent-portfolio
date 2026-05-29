@@ -1,5 +1,6 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+
 const projects = [
   {
     title: "Rate Pulse",
@@ -57,119 +58,162 @@ const projects = [
 ];
 
 export const Projects = () => {
+  const [featured, ...rest] = projects;
+
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
-      {/* Bg glows */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mx-auto max-w-3xl mb-16">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured Work
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
-            Projects that
-            <span className="font-serif italic font-normal text-white">
-              {" "}
-              make an impact.
-            </span>
-          </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
+    <section id="projects" className="section-shell border-b border-border/70">
+      <div className="container mx-auto px-6">
+        <div className="mb-12 grid gap-6 lg:grid-cols-[0.7fr_1fr] lg:items-end">
+          <div>
+            <div className="section-kicker">Featured work</div>
+            <h2 className="section-title-sm mt-4">
+              Real products and{" "}
+              <span className="font-serif text-primary">working systems.</span>
+            </h2>
+          </div>
+          <p className="section-copy max-w-3xl lg:justify-self-end">
             Selected systems from my resume and portfolio, spanning cloud-native
             platforms, marketplace software, internal tools, and data-driven
-            applications with real-world impact.
+            applications.
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className="group glass rounded-xl overflow-hidden animate-fade-in md:row-span-1"
-              style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+        <article className="panel overflow-hidden">
+          <div className="grid gap-px bg-border lg:grid-cols-[1.12fr_0.88fr]">
+            <a
+              href={featured.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block overflow-hidden bg-card"
             >
-              {/* Image */}
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <div className="relative overflow-hidden aspect-video">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60"
-                  />
-                  {/* Overlay Links */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <img
+                src={featured.image}
+                alt={`${featured.title} project preview`}
+                loading="lazy"
+                decoding="async"
+                className="aspect-video h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+              />
+            </a>
+
+            <div className="bg-card p-5 md:p-6">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-sm font-medium text-primary">{featured.period}</p>
+                  <h3 className="mt-2 text-2xl font-semibold">{featured.title}</h3>
+                </div>
+                <div className="flex gap-2">
+                  <a
+                    href={featured.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-button"
+                    aria-label={`${featured.title} live project`}
+                    title="Live project"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={featured.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-button"
+                    aria-label={`${featured.title} GitHub repository`}
+                    title="GitHub"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                {featured.description}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {featured.tags.map((tag) => (
+                  <span key={tag} className="chip text-xs">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
+          {rest.map((project) => (
+            <article key={project.title} className="panel flex min-h-full flex-col overflow-hidden">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block overflow-hidden border-b border-border"
+              >
+                <img
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+                />
+              </a>
+
+              <div className="flex flex-1 flex-col p-5">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    {project.period && (
+                      <p className="text-xs font-medium text-primary">{project.period}</p>
+                    )}
+                    <h3 className="mt-1 text-lg font-semibold">{project.title}</h3>
+                  </div>
+                  <div className="flex shrink-0 gap-2">
                     <a
                       href={project.link}
-                      className="p-2 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="icon-button h-9 w-9"
+                      aria-label={`${project.title} live project`}
+                      title="Live project"
                     >
-                      <ArrowUpRight className="w-4 h-4" />
+                      <ExternalLink className="h-4 w-4" />
                     </a>
                     <a
                       href={project.github}
-                      className="p-2 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="icon-button h-9 w-9"
+                      aria-label={`${project.title} GitHub repository`}
+                      title="GitHub"
                     >
-                      <Github className="w-4 h-4" />
+                      <Github className="h-4 w-4" />
                     </a>
                   </div>
                 </div>
-              </a>
-              {/* Content */}
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <div className="p-4 space-y-2">
-                  <div className="flex items-start justify-between">
-                    <h3 className="text-base font-semibold group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <ArrowUpRight
-                      className="w-5 h-5 
-                    text-muted-foreground group-hover:text-primary
-                    group-hover:translate-x-1 
-                    group-hover:-translate-y-1 transition-all"
-                    />
-                  </div>
-                  <p className="text-muted-foreground text-[13px] leading-relaxed">
-                    {project.period && (
-                      <span className="mb-2 block text-xs font-medium uppercase tracking-wider text-primary">
-                        {project.period}
-                      </span>
-                    )}
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIdx) => (
-                      <span
-                        key={tagIdx}
-                        className="px-2.5 py-0.5 rounded-full bg-surface text-[11px] font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {project.description}
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="chip text-xs">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-              </a>
-            </div>
+              </div>
+            </article>
           ))}
         </div>
 
-        {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <a
+        <div className="mt-10">
+          <AnimatedBorderButton
+            as="a"
             href="https://github.com/ThanhVinhTong?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AnimatedBorderButton>
-              View All Projects
-              <ArrowUpRight className="w-5 h-5" />
-            </AnimatedBorderButton>
-          </a>
+            View all projects
+            <ExternalLink className="h-5 w-5" />
+          </AnimatedBorderButton>
         </div>
       </div>
     </section>
