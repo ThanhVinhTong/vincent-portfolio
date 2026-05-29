@@ -1,6 +1,5 @@
 import { Button } from '@/components/Button';
 import { AnimatedBorderButton } from '@/components/AnimatedBorderButton'
-import { useMemo } from "react";
 
 import { ArrowRight, Download, ChevronDown } from 'lucide-react';
 import githubIcon from "@/assets/github.svg";
@@ -8,40 +7,31 @@ import linkedinIcon from "@/assets/linkedin.svg";
 
 const skillGroups = [
   {
-    title: "Frontend Development",
-    skills: ["React.js", "Next.js", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"],
+    title: "Programming Languages",
+    skills: ["Golang", "Python", "C/C++", "JavaScript/TypeScript", "Java", "SQL"],
   },
   {
-    title: "Backend Development",
-    skills: [".Net", "C#", "Golang", "Gin", "Python", "Selenium", "FastAPI", "Flask", "Node.js"],
-  },
-  {
-    title: "Database",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase", "RDS"],
+    title: "Frameworks & Libraries",
+    skills: ["ASP.NET Core", "Next.js", "React", "FastAPI", "Gin", "Flask", "Qt", "PySpark"],
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS", "DigitalOcean", "Docker", "Kubernetes", "Git", "GitHub Actions", "Vercel", "Render"],
+    skills: ["DigitalOcean", "AWS", "Docker", "Kubernetes", "GitHub Actions", "Vercel", "Render", "Supabase", "Upstash"],
+  },
+  {
+    title: "Databases & Tools",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "gRPC", "REST APIs", "Brevo", "Selenium", "Linux", "Unit Testing"],
   },
 ];
 
-export const Hero = ({ onTabChange }) => {
-  const heroParticles = useMemo(
-    () =>
-      Array.from(
-        {
-          length: 18,
-        },
-        () => ({
-          left: `${Math.random() * 100}%`,
-          top: `${Math.random() * 100}%`,
-          driftDuration: `${15 + Math.random() * 20}s`,
-          driftDelay: `${Math.random() * 5}s`,
-        })
-      ),
-    [],
-  );
+const heroParticles = Array.from({ length: 18 }, (_, index) => ({
+  left: `${(index * 37 + 11) % 100}%`,
+  top: `${(index * 53 + 17) % 100}%`,
+  driftDuration: `${15 + ((index * 7) % 20)}s`,
+  driftDelay: `${(index * 3) % 5}s`,
+}));
 
+export const Hero = ({ onTabChange }) => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
@@ -95,11 +85,11 @@ export const Hero = ({ onTabChange }) => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Vincent Tong — a software engineer with experience
-                across full-stack development, AI/computer vision, and data
-                engineering, building practical systems that solve real-world
-                problems. I have full work rights in Australia and I am open
-                to relocate for the right opportunity.
+                Hi, I'm Vincent Tong — a software engineer focused on
+                full-stack platforms, AI/computer vision, and data engineering.
+                I build practical systems across Go/Gin, Next.js, ASP.NET Core,
+                Python, and cloud-native deployment, with full work rights in
+                Australia and openness to relocate.
               </p>
             </div>
 
@@ -109,7 +99,7 @@ export const Hero = ({ onTabChange }) => {
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
 
-              <a href="https://drive.google.com/drive/folders/14VVsbRoUwE9oUbp0NkuBWDVhIgTor9S4?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href="/VincentTong_Resume.pdf" download="VincentTong_Resume.pdf">
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5" />
                   Download Resume

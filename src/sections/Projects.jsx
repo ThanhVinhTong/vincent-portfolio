@@ -3,18 +3,22 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
     title: "Rate Pulse",
+    period: "December 2025 - Present",
     description:
-      "Built an end-to-end platform that unifies exchange-rate tracking, market-news intelligence, and user personalization into a single workflow. Engineered a high-concurrency Go (Gin) + gRPC/Protobuf backend with Redis caching and Paseto/JWT-secured service workflows, a Next.js dashboard for real-time monitoring and AI insight cards, a Python + Selenium multi-source scraping engine (Yahoo Finance, global commodities), and automated CI/CD via GitHub Actions and Docker Hub deployed on Kubernetes (DigitalOcean).",
+      "Built and deployed a full-stack foreign exchange platform that aggregates rates, trends, and related news into a centralised dashboard for currency comparison and market context. Developed Go/Gin REST and gRPC services with Protocol Buffers, PostgreSQL/sqlc persistence, Redis caching, Paseto/JWT authentication, Brevo email integration, a Next.js dashboard with AI-generated market insight cards, and a Python/Selenium data pipeline. Automated CI/CD with GitHub Actions and Docker Hub for Kubernetes on DigitalOcean after migrating from AWS to reduce infrastructure cost.",
     image: "/projects/rate-pulse.jpg",
     tags: [
       "Golang",
       "Gin",
       "gRPC",
+      "Protocol Buffers",
       "PostgreSQL",
+      "sqlc",
       "Redis",
       "Next.js",
       "Python",
       "Selenium",
+      "Brevo",
       "GitHub Actions",
       "Kubernetes",
       "DigitalOcean",
@@ -24,8 +28,9 @@ const projects = [
   },
   {
     title: "Book Borrow",
+    period: "August 2025 - November 2025",
     description:
-      "Engineered and delivered a production-ready P2P marketplace (Aug 2025 – Nov 2025, Team of 8) for a non-profit book reader organisation in Western Australia, utilizing FastAPI and Next.js with integrated Stripe payments, Google OAuth, and AWS RDS.",
+      "Engineered and delivered a production-ready P2P marketplace for a non-profit book reader organisation in Western Australia as part of an eight-person team, using FastAPI and Next.js with integrated Stripe payments, Google OAuth, and AWS RDS.",
     image: "/projects/book-borrow.jpg",
     tags: ["FastAPI", "Next.js", "Stripe", "Google OAuth", "AWS RDS"],
     link: "https://github.com/ChienAnTu/Bookhive",
@@ -36,16 +41,16 @@ const projects = [
     description:
       "A full-stack project and task management application with secure authentication and persistent storage for structured team workflows.",
     image: "/projects/project-nexus.jpg",
-    tags: ["Next.js", "ASP.NET", "C#", "PostgreSQL", "Supabase"],
+    tags: ["Next.js", "ASP.NET Core", "C#", "PostgreSQL", "Supabase"],
     link: "https://thanhvinhtong.github.io/project-nexus",
     github: "https://github.com/ThanhVinhTong/project-nexus",
   },
   {
     title: "Wine-Cart Recommender System",
     description:
-      "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, a pretrained model, and Selenium pipelines to suggest real-time alternatives for out-of-stock items.",
+      "Engineered a full-stack recommendation engine using FastAPI, Next.js, MongoDB, and Selenium pipelines to suggest real-time alternatives for out-of-stock items.",
     image: "/projects/wine-cart.jpg",
-    tags: ["Python", "FastAPI", "Selenium", "MongoDB", "Next.js", "Pretrained CNNs"],
+    tags: ["Python", "FastAPI", "Selenium", "MongoDB", "Next.js", "Recommendation Engine"],
     link: "https://wine-cart.vercel.app/",
     github: "https://github.com/ThanhVinhTong/wine-cart-project",
   },
@@ -71,9 +76,9 @@ export const Projects = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of projects from my resume, spanning cloud-native
-            systems, full-stack platforms, and data-driven applications with
-            real-world impact.
+            Selected systems from my resume and portfolio, spanning cloud-native
+            platforms, marketplace software, internal tools, and data-driven
+            applications with real-world impact.
           </p>
         </div>
 
@@ -130,6 +135,11 @@ export const Projects = () => {
                     />
                   </div>
                   <p className="text-muted-foreground text-[13px] leading-relaxed">
+                    {project.period && (
+                      <span className="mb-2 block text-xs font-medium uppercase tracking-wider text-primary">
+                        {project.period}
+                      </span>
+                    )}
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">

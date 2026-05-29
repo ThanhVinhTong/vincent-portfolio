@@ -40,4 +40,4 @@ npm run build
 
 ## 📬 Contact
 
-Feel free to reach out via my email [vinhtongthanh57@gmail.com](mailto:[vinhtongthanh57@gmail.com]) or connect on [LinkedIn](https://www.linkedin.com/in/vincent-tong-07b861224/).
+Feel free to reach out via my email [vinhtongthanh57@gmail.com](mailto:vinhtongthanh57@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/thanh-vinh-tong-b02b5016b/).

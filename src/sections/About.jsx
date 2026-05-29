@@ -5,13 +5,13 @@ const highlights = [
     icon: Code2,
     title: "AI & Computer Vision",
     description:
-      "Built U-Net and Attention U-Net pipelines for retinal imaging and display defect detection in research and manufacturing settings.",
+      "Built pretrained-model pipelines for retinal imaging and display defect detection in research and manufacturing settings.",
   },
   {
     icon: Rocket,
     title: "Full-Stack Delivery",
     description:
-      "Delivered operational and user-facing platforms with ASP.NET Core, Next.js, FastAPI, PostgreSQL, and SQL Server.",
+      "Delivered operational and user-facing platforms with Go/Gin, ASP.NET Core, Next.js, FastAPI, PostgreSQL, and SQL Server.",
   },
   {
     icon: Users,
@@ -23,7 +23,7 @@ const highlights = [
     icon: Lightbulb,
     title: "Data & Cloud Engineering",
     description:
-      "Built distributed data pipelines with PySpark and Hadoop, then shipped cloud-native systems with Docker, Kubernetes, and GitHub Actions.",
+      "Built distributed data pipelines with PySpark and Hadoop, then shipped cloud-native systems with Docker, Kubernetes, GitHub Actions, and DigitalOcean.",
   },
 ];
 

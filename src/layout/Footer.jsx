@@ -78,8 +78,8 @@ export const Footer = ({ activeTab, onTabChange }) => {
             <div>
               <h3 className="font-medium text-primary uppercase tracking-wider">Connect With Me</h3>
               <p className="text-sm text-muted-foreground mt-1">
-                Open to full-time opportunities and freelance projects. Let&apos;s
-                build something amazing together!
+                Open to full-time engineering opportunities, contract projects,
+                and relocation for the right role.
               </p>
             </div>
 

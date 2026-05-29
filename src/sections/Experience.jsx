@@ -17,7 +17,7 @@ const experiences = [
       {
         title: "Internal Project Management Platform",
         detail:
-          "Developed and implemented an internal full-stack project management platform with Next.js, ASP.NET Core, and PostgreSQL to centralize laboratory resources and schedules while streamlining project tracking for the team.",
+          "Developed and implemented an internal full-stack project management platform with Next.js, ASP.NET Core, and PostgreSQL to centralize laboratory resources and schedules, reducing context-switching and streamlining project tracking for the team.",
       },
     ],
     technologies: [
@@ -65,7 +65,7 @@ const experiences = [
       {
         title: "Distributed Data Platform",
         detail:
-          "Designed and maintained three distributed batch-processing pipelines using PySpark and Hadoop to ingest and transform 100M+ telecom records, achieving a 2x performance gain over legacy Pandas workflows.",
+          "Built distributed data pipelines using PySpark and Hadoop to process 100M+ telecom records, improving performance 2x and supporting downstream backend services.",
       },
       {
         title: "Recommendation Engine",
