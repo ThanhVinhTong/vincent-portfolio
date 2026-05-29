@@ -73,7 +73,7 @@ export const About = () => {
               </p>
               <p>
                 Outside of coding, I enjoy gaming — long-time League of Legends player,
-                along with Valorant and Warcraft II — and staying active through gym training
+                along with Valorant and Warcraft III — and staying active through gym training
                 and calisthenics. These keep my mind sharp, fresh and body strong.
               </p>
             </div>
