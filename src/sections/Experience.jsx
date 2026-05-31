@@ -1,7 +1,7 @@
 const experiences = [
   {
-    period: "Jul 2025 - Oct 2025",
-    role: "Software Engineering Intern",
+    period: "Jul 2025 - Nov 2025",
+    role: "Software Engineer",
     company: "Lions Eye Institute, Perth, Australia",
     highlights: [
       {
@@ -51,7 +51,7 @@ const experiences = [
   },
   {
     period: "Oct 2022 - Jun 2023",
-    role: "Data Engineer Associate",
+    role: "Data Engineer",
     company: "Vietnam Posts and Telecommunications Group, Hanoi, Vietnam",
     highlights: [
       {

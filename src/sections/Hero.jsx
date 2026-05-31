@@ -20,7 +20,7 @@ const skillGroups = [
   },
   {
     title: "Databases & Tools",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "gRPC", "REST APIs", "Brevo", "Selenium", "Linux", "Unit Testing"],
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Git", "gRPC", "REST APIs", "Brevo", "Selenium", "Linux", "Unit Testing", "CI/CD"],
   },
 ];
 

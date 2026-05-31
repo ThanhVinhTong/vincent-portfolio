@@ -7,7 +7,7 @@ const credentialGroups = [
       {
         name: "AWS Certified Developer - Associate",
         issuer: "Amazon Web Services",
-        date: "Valid: Feb 2026 - Feb 2029",
+        date: "Valid until Feb 2029",
         link: "https://www.credly.com/badges/dcf40059-b515-4312-aab4-f47cc08f48b4/public_url",
       },
       {
