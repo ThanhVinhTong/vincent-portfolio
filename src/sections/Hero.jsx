@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
-import { ArrowRight, Download, ChevronDown } from "lucide-react";
+import { ArrowRight, Download, ChevronDown, ExternalLink } from "lucide-react";
 import githubIcon from "@/assets/github.svg";
 import linkedinIcon from "@/assets/linkedin.svg";
 
@@ -69,7 +69,7 @@ export const Hero = ({ onTabChange }) => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • Full Work Rights
+                Software Engineer - Problem Solver
               </span>
             </div>
 
@@ -85,10 +85,11 @@ export const Hero = ({ onTabChange }) => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Vincent Tong — a software engineer focused on
+                Hi, I'm Vincent Tong - a software engineer focused on
                 full-stack platforms, AI/computer vision, and data engineering.
                 I build practical systems across Go/Gin, Next.js, ASP.NET Core,
-                Python, and cloud-native deployment, with full work rights in
+                Python, and cloud-native deployment. I like turning ambiguous
+                problems into reliable products, with full work rights in
                 Australia and openness to relocate.
               </p>
             </div>
@@ -98,6 +99,16 @@ export const Hero = ({ onTabChange }) => {
               <Button size="lg" onClick={() => onTabChange?.("contact")}>
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
+
+              <AnimatedBorderButton
+                as="a"
+                href="https://tech-interview-prepare.vercel.app/#/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Practice Lab
+                <ExternalLink className="w-5 h-5" />
+              </AnimatedBorderButton>
 
               <AnimatedBorderButton
                 as="a"

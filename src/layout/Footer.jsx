@@ -2,6 +2,7 @@ import { Facebook, Github, Instagram, Linkedin, Mail, Phone } from "lucide-react
 
 const footerTabs = [
   { key: "home", label: "Home" },
+  { key: "problem-solving", label: "Problem Solving" },
   { key: "projects", label: "Projects" },
   { key: "experience", label: "Experience" },
   { key: "testimonials", label: "References" },

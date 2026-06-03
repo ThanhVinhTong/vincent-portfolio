@@ -6,6 +6,7 @@ import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
 import { Education } from "@/sections/Education";
 import { Projects } from "@/sections/Projects";
+import { ProblemSolving } from "@/sections/ProblemSolving";
 import { Experience } from "@/sections/Experience";
 import { Testimonials } from "@/sections/Testimonials";
 import { Certifications } from "@/sections/Certifications";
@@ -22,6 +23,8 @@ function App() {
     switch (activeTab) {
       case "projects":
         return <Projects />;
+      case "problem-solving":
+        return <ProblemSolving onTabChange={setActiveTab} />;
       case "experience":
         return <Experience />;
       case "testimonials":
@@ -35,6 +38,7 @@ function App() {
         return (
           <>
             <Hero onTabChange={setActiveTab} />
+            <ProblemSolving onTabChange={setActiveTab} />
             <About />
             <Education />
           </>
