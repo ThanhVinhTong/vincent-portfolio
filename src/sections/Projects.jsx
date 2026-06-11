@@ -3,31 +3,6 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
   {
-    title: "Rate Pulse",
-    period: "December 2025 - Present",
-    description:
-      "Built and deployed a full-stack foreign exchange platform that aggregates rates, trends, and related news into a centralised dashboard for currency comparison and market context. Developed Go/Gin REST and gRPC services with Protocol Buffers, PostgreSQL/sqlc persistence, Redis caching, Paseto/JWT authentication, Brevo email integration, a Next.js dashboard with AI-generated market insight cards, and a Python/Selenium data pipeline. Automated CI/CD with GitHub Actions and Docker Hub for Kubernetes on DigitalOcean after migrating from AWS to reduce infrastructure cost.",
-    image: "/projects/rate-pulse.jpg",
-    tags: [
-      "Golang",
-      "Gin",
-      "gRPC",
-      "Protocol Buffers",
-      "PostgreSQL",
-      "sqlc",
-      "Redis",
-      "Next.js",
-      "Python",
-      "Selenium",
-      "Brevo",
-      "GitHub Actions",
-      "Kubernetes",
-      "DigitalOcean",
-    ],
-    link: "https://rate-pulse.me",
-    github: "https://github.com/ThanhVinhTong/rate-pulse",
-  },
-  {
     title: "Book Borrow",
     period: "August 2025 - November 2025",
     description:
@@ -72,8 +47,8 @@ export const Projects = () => {
             </h2>
           </div>
           <p className="section-copy max-w-3xl lg:justify-self-end">
-            Selected systems from my resume and portfolio, spanning cloud-native
-            platforms, marketplace software, internal tools, and data-driven
+            Selected project work beyond the primary experience timeline,
+            spanning marketplace software, internal tools, and data-driven
             applications.
           </p>
         </div>

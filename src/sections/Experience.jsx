@@ -1,23 +1,75 @@
 const experiences = [
   {
-    period: "Jul 2025 - Nov 2025",
+    period: "Dec 2025 - Present",
     role: "Software Engineer",
+    company: "Rate Pulse, Perth, Australia",
+    highlights: [
+      {
+        title: "Production FX monitoring platform",
+        detail:
+          "Built and launched a production FX monitoring platform that consolidates fragmented rate-checking workflows with centralised exchange-rate comparison, conversion, historical trends, and macro-news context.",
+      },
+      {
+        title: "Secure read-heavy backend",
+        detail:
+          "Designed a Go/Gin backend with PostgreSQL/sqlc, Redis caching, Paseto/JWT auth, Brevo-powered email verification, REST APIs, and gRPC/Protocol Buffers for typed service contracts.",
+      },
+      {
+        title: "Market-context dashboard",
+        detail:
+          "Developed a Next.js, React, and TypeScript dashboard that helps users move from rate discovery to market context through source-aware rate tables, converter flows, historical charts, and macro-news feeds.",
+      },
+      {
+        title: "Automated data pipelines",
+        detail:
+          "Built Python Selenium pipelines to collect and normalise multi-source FX data into PostgreSQL and market-intelligence snapshots into MongoDB.",
+      },
+      {
+        title: "Production delivery automation",
+        detail:
+          "Automated delivery with Docker, GitHub Actions, Kubernetes, and DigitalOcean, reducing manual deployment work through independent API/worker rollouts and scheduled FX/news collection workflows.",
+      },
+    ],
+    technologies: [
+      "Go/Gin",
+      "PostgreSQL/sqlc",
+      "Redis",
+      "Paseto/JWT",
+      "Brevo",
+      "REST APIs",
+      "gRPC",
+      "Protocol Buffers",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Python",
+      "Selenium",
+      "MongoDB",
+      "Docker",
+      "GitHub Actions",
+      "Kubernetes",
+      "DigitalOcean",
+    ],
+  },
+  {
+    period: "Jul 2025 - Nov 2025",
+    role: "Software Engineer Intern",
     company: "Lions Eye Institute, Perth, Australia",
     highlights: [
       {
         title: "Cross-platform medical application",
         detail:
-          "Co-engineered a C++/Qt and Python application with a SQLite persistence layer that centralised data from multiple ophthalmic instruments and reduced batch inspection time by 89%.",
+          "Built a cross-platform medical application using C++/Qt, Python, and SQLite, centralising ophthalmic instrument data and reducing inspection time by 89%.",
       },
       {
         title: "Retinal vessel segmentation pipeline",
         detail:
-          "Developed preprocessing and evaluation scripts around a pretrained model, reaching 83% accuracy across heterogeneous retinal imaging datasets.",
+          "Developed an image-processing pipeline around a pretrained segmentation model, with modular preprocessing and evaluation scripts that achieved 83% accuracy across heterogeneous retinal imaging datasets.",
       },
       {
         title: "Internal project management platform",
         detail:
-          "Built a Next.js, ASP.NET Core, and PostgreSQL platform to centralise laboratory resources, schedules, and project tracking.",
+          "Delivered a Next.js, ASP.NET Core, and PostgreSQL platform to centralise laboratory resources and schedules while reducing team context-switching.",
       },
     ],
     technologies: [
@@ -39,12 +91,12 @@ const experiences = [
       {
         title: "Automated defect detection",
         detail:
-          "Architected and deployed a pretrained-model computer vision system for display panel defect detection, reducing manual inspection latency by 40%.",
+          "Deployed a pretrained computer vision system for display panel defect detection, reducing manual inspection latency by 40% and standardising production QA benchmarks.",
       },
       {
         title: "Internal tracking application",
         detail:
-          "Developed a C#/.NET WPF desktop application with a SQL Server backend to replace fragmented spreadsheet workflows.",
+          "Developed a C#/.NET WPF desktop application with a SQL Server backend to centralise resource tracking, replacing fragmented spreadsheet workflows and improving cross-team operational visibility.",
       },
     ],
     technologies: ["Pretrained Model", "Computer Vision", "WPF", "C#/.NET", "SQL Server"],
@@ -62,19 +114,17 @@ const experiences = [
       {
         title: "Recommendation engine",
         detail:
-          "Engineered a FastAPI, Next.js, MongoDB, and Selenium recommendation system that surfaced real-time alternatives for out-of-stock items.",
+          "Engineered a FastAPI, Next.js, MongoDB, and Selenium recommendation engine to surface real-time alternatives for out-of-stock products, reducing dead-end user flows.",
       },
     ],
     technologies: [
       "Python",
       "PySpark",
       "Hadoop",
-      "Pandas",
       "FastAPI",
       "Next.js",
       "MongoDB",
       "Selenium",
-      "Batch Processing",
     ],
   },
 ];
@@ -90,8 +140,8 @@ export const Experience = () => {
             <span className="font-serif text-primary">research and production.</span>
           </h2>
           <p className="section-copy mt-4">
-            A timeline of software engineering, AI/computer vision, and data
-            engineering work in real teams and real operating environments.
+            A timeline of software engineering, product delivery, AI/computer
+            vision, and data engineering work in real operating environments.
           </p>
         </div>
 

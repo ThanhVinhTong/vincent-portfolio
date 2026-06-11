@@ -2,7 +2,7 @@ const educationItems = [
   {
     school: "The University of Western Australia",
     location: "Perth, Australia",
-    degree: "Master of Information Technology",
+    degree: "Master of Information Technology, Software Systems Specialisation",
     period: "Feb 2024 — Dec 2025",
   },
   {

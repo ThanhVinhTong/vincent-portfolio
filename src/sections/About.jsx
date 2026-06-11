@@ -50,11 +50,11 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a software engineer who graduated with a Master of
-                Information Technology from UWA, with hands-on experience across
-                full-stack development, AI/computer vision, and data
-                engineering. I enjoy building practical products that solve
-                real problems and scale reliably.
+                I'm a software engineer with a Master of Information Technology
+                from UWA, where I completed the Software Systems Specialisation,
+                and hands-on experience across full-stack development,
+                AI/computer vision, and data engineering. I enjoy building
+                practical products that solve real problems and scale reliably.
               </p>
               <p>
                 I work best at the intersection of people and technology. Having

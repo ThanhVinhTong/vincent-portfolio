@@ -19,8 +19,12 @@ const skillGroups = [
     skills: ["DigitalOcean", "AWS", "Docker", "Kubernetes", "GitHub Actions", "Vercel", "Render", "Supabase", "Upstash"],
   },
   {
-    title: "Databases & Tools",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Git", "gRPC", "REST APIs", "Brevo", "Selenium", "Linux", "Unit Testing", "CI/CD"],
+    title: "Databases & Caching",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+  },
+  {
+    title: "Tools & Architecture",
+    skills: ["Git", "gRPC", "RESTful APIs", "Brevo", "Selenium", "Linux", "Unit Testing", "CI/CD Pipelines"],
   },
 ];
 
