@@ -7,7 +7,7 @@ const credentialGroups = [
       {
         name: "AWS Certified Developer - Associate",
         issuer: "Amazon Web Services",
-        date: "Valid until Feb 2029",
+        date: "Feb 2026 - Feb 2029",
         link: "https://www.credly.com/badges/dcf40059-b515-4312-aab4-f47cc08f48b4/public_url",
       },
       {
@@ -38,6 +38,12 @@ const credentialGroups = [
         issuer: "SAMSUNG DISPLAY VIETNAM",
         date: "2023",
         link: "https://github.com/ThanhVinhTong/Certificates/blob/main/SDV's%20Internship%20Award/TongThanhVinh_Award_SamsungDisplayVietnam.pdf",
+      },
+      {
+        name: "Second Place - Samsung Application Development Contest",
+        issuer: "Samsung",
+        date: "Sep 2022",
+        link: "https://github.com/ThanhVinhTong/Certificates",
       },
     ],
   },

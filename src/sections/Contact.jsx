@@ -26,8 +26,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Mobile",
-    value: "+61 481 789 234",
-    href: "tel:+61481789234",
+    value: "+84 363 955 684",
+    href: "tel:+84363955684",
   },
   {
     icon: Linkedin,
@@ -144,7 +144,7 @@ export const Contact = () => {
           </div>
           <p className="section-copy max-w-3xl lg:justify-self-end">
             Open to full-time software engineering roles, contract projects, and
-            relocation for the right opportunity.
+            relocation opportunities in Vietnam.
           </p>
         </div>
 
@@ -292,8 +292,8 @@ export const Contact = () => {
                 <span className="font-medium">Currently available</span>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Full work rights in Australia. Open to full-time engineering roles,
-                contract work, and relocation for the right role.
+                Based in Perth, Australia and open to relocating to Vietnam for
+                the right software engineering opportunity.
               </p>
             </div>
           </aside>

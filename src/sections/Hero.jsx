@@ -8,23 +8,23 @@ import linkedinIcon from "@/assets/linkedin.svg";
 const skillGroups = [
   {
     title: "Programming Languages",
-    skills: ["Golang", "Python", "C/C++", "JavaScript/TypeScript", "Java", "SQL"],
+    skills: ["Go", "Python", "C#", "TypeScript/JavaScript", "SQL"],
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["ASP.NET Core", "Next.js", "React", "FastAPI", "Gin", "Flask", "Qt", "PySpark"],
+    skills: ["Gin", "FastAPI", "ASP.NET Core", "REST APIs", "gRPC", "Next.js", "React"],
   },
   {
     title: "Cloud & DevOps",
-    skills: ["DigitalOcean", "AWS", "Docker", "Kubernetes", "GitHub Actions", "Vercel", "Render", "Supabase", "Upstash"],
+    skills: ["AWS", "DigitalOcean", "Docker", "Kubernetes", "GitHub Actions", "Git", "Linux"],
   },
   {
-    title: "Databases & Caching",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+    title: "Data & Databases",
+    skills: ["PostgreSQL", "Redis", "MongoDB", "SQLite", "PySpark", "Hadoop"],
   },
   {
-    title: "Tools & Architecture",
-    skills: ["Git", "gRPC", "RESTful APIs", "Brevo", "Selenium", "Linux", "Unit Testing", "CI/CD Pipelines"],
+    title: "Engineering Focus",
+    skills: ["Backend Services", "Microservices", "Data Pipelines", "CI/CD", "Cloud Deployment"],
   },
 ];
 
@@ -73,7 +73,7 @@ export const Hero = ({ onTabChange }) => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer - Problem Solver
+                Backend-focused Software Engineer
               </span>
             </div>
 
@@ -89,12 +89,11 @@ export const Hero = ({ onTabChange }) => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Vincent Tong - a software engineer focused on
-                full-stack platforms, AI/computer vision, and data engineering.
-                I build practical systems across Go/Gin, Next.js, ASP.NET Core,
-                Python, and cloud-native deployment. I like turning ambiguous
-                problems into reliable products, with full work rights in
-                Australia and openness to relocate.
+                Hi, I'm Vincent Tong - a backend-focused software engineer with
+                2+ years of experience building backend services, data
+                pipelines, and end-to-end web applications. I work across Go,
+                Python, TypeScript, SQL, and cloud-native infrastructure, and
+                I'm open to relocating to Vietnam.
               </p>
             </div>
 
@@ -171,7 +170,7 @@ export const Hero = ({ onTabChange }) => {
 
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">1+</div>
+                  <div className="text-2xl font-bold text-primary">2+</div>
                   <div className="text-xs text-muted-foreground">
                     Years Exp.
                   </div>

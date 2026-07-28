@@ -11,6 +11,12 @@ const educationItems = [
     degree: "Bachelor of Information Technology",
     period: "Aug 2019 — Sep 2023",
   },
+  {
+    school: "HUS High School for Gifted Students",
+    location: "Hanoi, Vietnam",
+    degree: "Mathematics Specialisation",
+    period: "Aug 2016 - Jul 2019",
+  },
 ];
 
 export const Education = () => {
@@ -33,7 +39,7 @@ export const Education = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 auto-rows-fr">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-fr">
           {educationItems.map((item, idx) => (
             <article
               key={idx}

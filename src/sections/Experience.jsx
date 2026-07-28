@@ -1,6 +1,6 @@
 const experiences = [
   {
-    period: "Dec 2025 - Present",
+    period: "Jun 2025 - Present",
     role: "Software Engineer",
     company: "Rate Pulse, Perth, Australia",
     highlights: [
@@ -12,7 +12,7 @@ const experiences = [
       {
         title: "Secure read-heavy backend",
         detail:
-          "Designed a Go/Gin backend with PostgreSQL/sqlc, Redis caching, Paseto/JWT auth, Brevo-powered email verification, REST APIs, and gRPC/Protocol Buffers for typed service contracts.",
+          "Developed Go backend microservices using REST and gRPC, contributed to PostgreSQL data services, and used Redis caching to reduce P95 latency at 20 QPS from 7-10 seconds to approximately 250 ms.",
       },
       {
         title: "Market-context dashboard",
@@ -27,7 +27,7 @@ const experiences = [
       {
         title: "Production delivery automation",
         detail:
-          "Automated delivery with Docker, GitHub Actions, Kubernetes, and DigitalOcean, reducing manual deployment work through independent API/worker rollouts and scheduled FX/news collection workflows.",
+          "Built CI/CD pipelines with GitHub Actions and migrated services from AWS to a lower-cost DigitalOcean deployment using Docker and Kubernetes.",
       },
     ],
     technologies: [
@@ -52,14 +52,14 @@ const experiences = [
     ],
   },
   {
-    period: "Jul 2025 - Nov 2025",
+    period: "Jan 2025 - May 2025",
     role: "Software Engineer Intern",
     company: "Lions Eye Institute, Perth, Australia",
     highlights: [
       {
         title: "Cross-platform medical application",
         detail:
-          "Built a cross-platform medical application using C++/Qt, Python, and SQLite, centralising ophthalmic instrument data and reducing inspection time by 89%.",
+          "Developed an internal FastAPI application backed by embedded SQLite for a low-resource server, reducing the review process from around one hour to approximately ten minutes.",
       },
       {
         title: "Retinal vessel segmentation pipeline",
@@ -73,9 +73,8 @@ const experiences = [
       },
     ],
     technologies: [
-      "C++",
       "Python",
-      "Qt",
+      "FastAPI",
       "SQLite",
       "Pretrained Model",
       "Next.js",
@@ -102,19 +101,19 @@ const experiences = [
     technologies: ["Pretrained Model", "Computer Vision", "WPF", "C#/.NET", "SQL Server"],
   },
   {
-    period: "Oct 2022 - Jun 2023",
+    period: "Jun 2022 - Jun 2023",
     role: "Data Engineer",
     company: "Vietnam Posts and Telecommunications Group, Hanoi, Vietnam",
     highlights: [
       {
         title: "Distributed data platform",
         detail:
-          "Built PySpark and Hadoop pipelines to process 100M+ telecom records, improving performance 2x and supporting downstream backend services.",
+          "Developed and migrated big-data pipelines processing approximately 100 million records daily from Pandas to Spark and Hadoop, reducing runtime by roughly three times.",
       },
       {
-        title: "Recommendation engine",
+        title: "AI service integration",
         detail:
-          "Engineered a FastAPI, Next.js, MongoDB, and Selenium recommendation engine to surface real-time alternatives for out-of-stock products, reducing dead-end user flows.",
+          "Developed backend services in Python and FastAPI to wrap core PyTorch AI models.",
       },
     ],
     technologies: [
@@ -122,10 +121,21 @@ const experiences = [
       "PySpark",
       "Hadoop",
       "FastAPI",
-      "Next.js",
-      "MongoDB",
-      "Selenium",
+      "PyTorch",
     ],
+  },
+  {
+    period: "Aug 2022 - Sep 2022",
+    role: "Software Engineer Intern",
+    company: "Samsung, Vietnam",
+    highlights: [
+      {
+        title: "Just Jump Android game",
+        detail:
+          "Developed an offline casual Android game inspired by Bounce using Kotlin, separating player movement, obstacles, scoring, and game-state logic to simplify future updates.",
+      },
+    ],
+    technologies: ["Kotlin", "Android", "Game Development"],
   },
 ];
 
