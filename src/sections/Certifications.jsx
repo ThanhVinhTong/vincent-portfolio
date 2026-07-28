@@ -42,7 +42,7 @@ const credentialGroups = [
       {
         name: "Second Place - Samsung Application Development Contest",
         issuer: "Samsung",
-        date: "Sep 2022",
+        date: "May 2022",
         link: "https://github.com/ThanhVinhTong/Certificates",
       },
     ],

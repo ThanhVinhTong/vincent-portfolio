@@ -9,7 +9,7 @@ const projects = [
       "Engineered and delivered a production-ready P2P marketplace for a non-profit book reader organisation in Western Australia as part of an eight-person team, using FastAPI and Next.js with integrated Stripe payments, Google OAuth, and AWS RDS.",
     image: "/projects/book-borrow.jpg",
     tags: ["FastAPI", "Next.js", "Stripe", "Google OAuth", "AWS RDS"],
-    link: "https://github.com/ChienAnTu/Bookhive",
+    link: "https://www.bookborrow.org/",
     github: "https://github.com/ChienAnTu/Bookhive",
   },
   {

@@ -125,7 +125,7 @@ const experiences = [
     ],
   },
   {
-    period: "Aug 2022 - Sep 2022",
+    period: "Apr 2022 - May 2022",
     role: "Software Engineer Intern",
     company: "Samsung, Vietnam",
     highlights: [
