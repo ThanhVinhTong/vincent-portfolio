@@ -5,9 +5,9 @@ const experiences = [
     company: "Rate Pulse, Perth, Australia",
     highlights: [
       {
-        title: "Production FX monitoring platform",
+        title: "End-to-end FX intelligence platform",
         detail:
-          "Built and launched a production FX monitoring platform that consolidates fragmented rate-checking workflows with centralised exchange-rate comparison, conversion, historical trends, and macro-news context.",
+          "Built an end-to-end FX intelligence platform combining exchange-rate tracking, tax- and fee-inclusive conversion, historical trends, market news, and user personalisation in a single workflow.",
       },
       {
         title: "Secure read-heavy backend",
@@ -15,14 +15,14 @@ const experiences = [
           "Developed Go backend microservices using REST and gRPC, contributed to PostgreSQL data services, and used Redis caching to reduce P95 latency at 20 QPS from 7-10 seconds to approximately 250 ms.",
       },
       {
-        title: "Market-context dashboard",
+        title: "Responsive frontend",
         detail:
-          "Developed a Next.js, React, and TypeScript dashboard that helps users move from rate discovery to market context through source-aware rate tables, converter flows, historical charts, and macro-news feeds.",
+          "Built and deployed a responsive frontend using Next.js and TypeScript on Vercel, with server-side rendering, parallel data fetching, and typed API responses.",
       },
       {
         title: "Automated data pipelines",
         detail:
-          "Built Python Selenium pipelines to collect and normalise multi-source FX data into PostgreSQL and market-intelligence snapshots into MongoDB.",
+          "Developed a multi-source scraping engine to collect and normalise structured market data using Python, Selenium, and GitHub Actions.",
       },
       {
         title: "Production delivery automation",
@@ -32,19 +32,15 @@ const experiences = [
     ],
     technologies: [
       "Go/Gin",
-      "PostgreSQL/sqlc",
+      "PostgreSQL",
       "Redis",
-      "Paseto/JWT",
-      "Brevo",
       "REST APIs",
       "gRPC",
-      "Protocol Buffers",
       "Next.js",
-      "React",
       "TypeScript",
+      "Vercel",
       "Python",
       "Selenium",
-      "MongoDB",
       "Docker",
       "GitHub Actions",
       "Kubernetes",
@@ -57,26 +53,20 @@ const experiences = [
     company: "Lions Eye Institute, Perth, Australia",
     highlights: [
       {
-        title: "Cross-platform medical application",
+        title: "Internal review application",
         detail:
-          "Developed an internal FastAPI application backed by embedded SQLite for a low-resource server, reducing the review process from around one hour to approximately ten minutes.",
+          "Developed an internal web application using Python and FastAPI with an embedded SQLite database for efficient operation on a low-resource server, reducing the review process from around one hour to approximately ten minutes.",
       },
       {
-        title: "Retinal vessel segmentation pipeline",
+        title: "Laboratory workflow application",
         detail:
-          "Developed an image-processing pipeline around a pretrained segmentation model, with modular preprocessing and evaluation scripts that achieved 83% accuracy across heterogeneous retinal imaging datasets.",
-      },
-      {
-        title: "Internal project management platform",
-        detail:
-          "Delivered a Next.js, ASP.NET Core, and PostgreSQL platform to centralise laboratory resources and schedules while reducing team context-switching.",
+          "Developed an internal web application using Next.js, ASP.NET Core, and PostgreSQL for managing laboratory workflows.",
       },
     ],
     technologies: [
       "Python",
       "FastAPI",
       "SQLite",
-      "Pretrained Model",
       "Next.js",
       "ASP.NET Core",
       "PostgreSQL",
@@ -88,17 +78,17 @@ const experiences = [
     company: "Samsung Corporation, Bac Ninh, Vietnam",
     highlights: [
       {
-        title: "Automated defect detection",
+        title: "Display-panel defect detection",
         detail:
-          "Deployed a pretrained computer vision system for display panel defect detection, reducing manual inspection latency by 40% and standardising production QA benchmarks.",
+          "Deployed an AI model for display-panel defect detection, reducing manual inspection time by 40%.",
       },
       {
-        title: "Internal tracking application",
+        title: "Project management application",
         detail:
-          "Developed a C#/.NET WPF desktop application with a SQL Server backend to centralise resource tracking, replacing fragmented spreadsheet workflows and improving cross-team operational visibility.",
+          "Developed an end-to-end desktop application using .NET and a SQL Server database to manage projects.",
       },
     ],
-    technologies: ["Pretrained Model", "Computer Vision", "WPF", "C#/.NET", "SQL Server"],
+    technologies: ["AI Model", ".NET", "SQL Server"],
   },
   {
     period: "Jun 2022 - Jun 2023",
