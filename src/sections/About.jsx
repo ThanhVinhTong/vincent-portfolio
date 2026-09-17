@@ -1,29 +1,29 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { Cloud, Code2, Lightbulb, Users } from "lucide-react";
 
 const highlights = [
   {
     icon: Code2,
-    title: "AI & Computer Vision",
+    title: "Backend Engineering",
     description:
-      "Deployed an AI model for display-panel defect detection at Samsung Display, reducing manual inspection time by 40%.",
+      "Built services and operational platforms with Go/Gin, ASP.NET Core, and FastAPI, backed by PostgreSQL and SQL Server.",
   },
   {
-    icon: Rocket,
-    title: "Full-Stack Delivery",
+    icon: Cloud,
+    title: "Cloud Engineering",
     description:
-      "Delivered operational and user-facing platforms with Go/Gin, ASP.NET Core, Next.js, FastAPI, PostgreSQL, and SQL Server.",
+      "Shipped cloud-native systems with Docker, Kubernetes, GitHub Actions, and OVHcloud, connecting application delivery with cloud infrastructure.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Data & AI",
+    description:
+      "Built distributed pipelines with PySpark and Hadoop and deployed a defect-detection model at Samsung Display, reducing manual inspection time by 40%.",
   },
   {
     icon: Users,
     title: "Impact in Teams",
     description:
       "Worked across research, manufacturing, and product teams to turn real workflow pain points into maintainable software.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Data & Cloud Engineering",
-    description:
-      "Built distributed data pipelines with PySpark and Hadoop, then shipped cloud-native systems with Docker, Kubernetes, GitHub Actions, and OVHcloud.",
   },
 ];
 
@@ -41,20 +41,21 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building impactful products,
+              Building reliable backends,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one solution at a time.
+                delivering in the cloud.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a software engineer with a Master of Information Technology
-                from UWA, where I completed the Software Systems Specialisation,
-                and hands-on experience across full-stack development,
-                AI/computer vision, and data engineering. I enjoy building
-                practical products that solve real problems and scale reliably.
+                I'm a software engineer focused on backend and cloud engineering,
+                with hands-on experience in both. I hold a Master of Information
+                Technology from UWA, where I completed the Software Systems
+                Specialisation. I enjoy building reliable services and the cloud
+                systems that run them, drawing on supporting experience in
+                full-stack development, AI/computer vision, and data engineering.
               </p>
               <p>
                 I work best at the intersection of people and technology. Having
@@ -80,10 +81,10 @@ export const About = () => {
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to build reliable, user-focused software that
-                creates real-world impact — from intelligent AI systems to
-                scalable full-stack applications. I always balance cost and
-                performance to deliver the most suitable outcome."
+                "My mission is to build reliable backend services and cloud
+                systems that solve real problems. I balance maintainability,
+                cost, and performance to deliver software that serves its users
+                well."
               </p>
             </div>
           </div>

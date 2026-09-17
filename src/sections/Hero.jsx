@@ -24,7 +24,7 @@ const skillGroups = [
   },
   {
     title: "Engineering Focus",
-    skills: ["Backend Services", "Microservices", "Data Pipelines", "CI/CD", "Cloud Deployment"],
+    skills: ["Backend Engineering", "Cloud Engineering", "Microservices", "Data Pipelines", "CI/CD"],
   },
 ];
 
@@ -73,27 +73,28 @@ export const Hero = ({ onTabChange }) => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Backend-focused Software Engineer
+                Backend &amp; Cloud Engineering
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">digital</span>
+                Building <span className="text-primary glow-text">backend</span>
                 <br />
-                experiences with
+                services and
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  cloud systems.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Vincent Tong - a backend-focused software engineer with
-                experience building backend services, data
-                pipelines, and end-to-end web applications. I work across Go,
-                Python, TypeScript, SQL, and cloud-native infrastructure, and
-                I'm open to opportunities in Australia, Singapore, and Vietnam.
+                Hi, I'm Vincent Tong - a software engineer focused on backend
+                and cloud engineering. My experience spans APIs, microservices,
+                data pipelines, containerised deployments, and CI/CD. I enjoy
+                building reliable services and the cloud infrastructure that
+                runs them, and I'm open to opportunities in Australia,
+                Singapore, and Vietnam.
               </p>
             </div>
 
@@ -170,7 +171,7 @@ export const Hero = ({ onTabChange }) => {
 
                 {/* Focus Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">Backend</div>
+                  <div className="text-2xl font-bold text-primary">Backend &amp; Cloud</div>
                   <div className="text-xs text-muted-foreground">
                     Engineering focus
                   </div>

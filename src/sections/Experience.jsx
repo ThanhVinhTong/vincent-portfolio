@@ -20,7 +20,7 @@ const experiences = [
           "Developed a multi-source scraping engine to collect and normalise structured market data using Python, Selenium, and GitHub Actions.",
       },
       {
-        title: "Production delivery automation",
+        title: "Cloud infrastructure and CI/CD",
         detail:
           "Built CI/CD pipelines with GitHub Actions and migrated services from AWS to a lower-cost OVHcloud deployment using Docker and Kubernetes, reducing infrastructure costs.",
       },
@@ -125,12 +125,13 @@ export const Experience = () => {
         <div className="mb-12 max-w-3xl">
           <div className="section-kicker">Experience</div>
           <h2 className="section-title-sm mt-4">
-            Engineering work across{" "}
-            <span className="font-serif text-primary">research and production.</span>
+            Backend and cloud engineering,{" "}
+            <span className="font-serif text-primary">grounded in real work.</span>
           </h2>
           <p className="section-copy mt-4">
-            A timeline of software engineering, product delivery, AI/computer
-            vision, and data engineering work in real operating environments.
+            Experience building backend services and data pipelines, deploying
+            cloud infrastructure, and automating delivery, alongside application
+            development and AI integration across research and production.
           </p>
         </div>
 

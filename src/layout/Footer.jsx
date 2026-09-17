@@ -50,8 +50,8 @@ export const Footer = ({ activeTab, onTabChange }) => {
               Vincent Tong<span className="text-primary">.</span>
             </button>
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Software engineer building reliable full-stack, AI, data, and cloud
-              systems for practical workflows.
+              Software engineer focused on backend and cloud engineering,
+              building reliable services and the systems that run them.
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">
               <a

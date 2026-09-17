@@ -144,7 +144,8 @@ export const Contact = () => {
           </div>
           <p className="section-copy max-w-3xl lg:justify-self-end">
             Open to software engineering opportunities across Australia,
-            Singapore, and Vietnam, including full-time roles and contract projects.
+            Singapore, and Vietnam, with particular interest in backend and cloud
+            engineering, including full-time roles and contract projects.
           </p>
         </div>
 
@@ -292,8 +293,9 @@ export const Contact = () => {
                 <span className="font-medium">Currently available</span>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Based in Perth, Australia and open to software engineering
-                opportunities across Australia, Singapore, and Vietnam.
+                Based in Perth, Australia and open to opportunities across
+                Australia, Singapore, and Vietnam. My focus is backend and cloud
+                engineering.
               </p>
             </div>
           </aside>
