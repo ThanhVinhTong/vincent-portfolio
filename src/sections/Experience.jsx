@@ -1,23 +1,18 @@
 const experiences = [
   {
-    period: "Jun 2025 - Present",
+    period: "Dec 2025 - Present",
     role: "Software Engineer",
-    company: "Rate Pulse, Perth, Australia",
+    company: "Rate Pulse, Australia",
     highlights: [
       {
-        title: "End-to-end FX intelligence platform",
+        title: "Self-hosted FX platform",
         detail:
-          "Built an end-to-end FX intelligence platform combining exchange-rate tracking, tax- and fee-inclusive conversion, historical trends, market news, and user personalisation in a single workflow.",
+          "Designed and self-hosted a not-for-profit FX platform helping international users compare exchange rates, fees, taxes, historical trends, and market news.",
       },
       {
-        title: "Secure read-heavy backend",
+        title: "Backend services and caching",
         detail:
-          "Developed Go backend microservices using REST and gRPC, contributed to PostgreSQL data services, and used Redis caching to reduce P95 latency at 20 QPS from 7-10 seconds to approximately 250 ms.",
-      },
-      {
-        title: "Responsive frontend",
-        detail:
-          "Built and deployed a responsive frontend using Next.js and TypeScript on Vercel, with server-side rendering, parallel data fetching, and typed API responses.",
+          "Developed backend microservices in Go using REST and gRPC, contributed to building and maintaining PostgreSQL databases, and cached frequently accessed, rarely changing data in Redis. Reduced P95 latency at 20 QPS from 7-10 seconds to approximately 250 ms.",
       },
       {
         title: "Automated data pipelines",
@@ -27,35 +22,41 @@ const experiences = [
       {
         title: "Production delivery automation",
         detail:
-          "Built CI/CD pipelines with GitHub Actions and migrated services from AWS to a lower-cost DigitalOcean deployment using Docker and Kubernetes.",
+          "Built CI/CD pipelines with GitHub Actions and migrated services from AWS to a lower-cost OVHcloud deployment using Docker and Kubernetes, reducing infrastructure costs.",
+      },
+      {
+        title: "Responsive frontend",
+        detail:
+          "Built and deployed a responsive frontend using Next.js and TypeScript on Cloudflare, with server-side rendering, parallel data fetching across backend services, and typed API responses to reduce integration errors.",
       },
     ],
     technologies: [
-      "Go/Gin",
+      "Go",
       "PostgreSQL",
       "Redis",
       "REST APIs",
       "gRPC",
       "Next.js",
       "TypeScript",
-      "Vercel",
+      "Cloudflare",
       "Python",
       "Selenium",
       "Docker",
       "GitHub Actions",
       "Kubernetes",
-      "DigitalOcean",
+      "AWS",
+      "OVHcloud",
     ],
   },
   {
-    period: "Jan 2025 - May 2025",
+    period: "Jul 2025 - Nov 2025",
     role: "Software Engineer Intern",
-    company: "Lions Eye Institute, Perth, Australia",
+    company: "Lions Eye Institute, Australia",
     highlights: [
       {
         title: "Internal review application",
         detail:
-          "Developed an internal web application using Python and FastAPI with an embedded SQLite database for efficient operation on a low-resource server, reducing the review process from around one hour to approximately ten minutes.",
+          "Developed an internal web application using Python and FastAPI with an embedded SQLite database to minimise memory usage and database network I/O overhead on a low-resource server. Reduced the review process from around one hour to approximately ten minutes.",
       },
       {
         title: "Laboratory workflow application",
@@ -75,30 +76,30 @@ const experiences = [
   {
     period: "Aug 2023 - Oct 2023",
     role: "Software Engineer Intern",
-    company: "Samsung Corporation, Bac Ninh, Vietnam",
+    company: "Samsung Display, Vietnam",
     highlights: [
-      {
-        title: "Display-panel defect detection",
-        detail:
-          "Deployed an AI model for display-panel defect detection, reducing manual inspection time by 40%.",
-      },
       {
         title: "Project management application",
         detail:
           "Developed an end-to-end desktop application using .NET and a SQL Server database to manage projects.",
       },
+      {
+        title: "Display-panel defect detection",
+        detail:
+          "Deployed an AI model for display-panel defect detection, reducing manual inspection time by 40%.",
+      },
     ],
     technologies: ["AI Model", ".NET", "SQL Server"],
   },
   {
-    period: "Jun 2022 - Jun 2023",
+    period: "Oct 2022 - Jun 2023",
     role: "Data Engineer",
-    company: "Vietnam Posts and Telecommunications Group, Hanoi, Vietnam",
+    company: "VNPT Group, Vietnam",
     highlights: [
       {
         title: "Distributed data platform",
         detail:
-          "Developed and migrated big-data pipelines processing approximately 100 million records daily from Pandas to Spark and Hadoop, reducing runtime by roughly three times.",
+          "Developed and migrated large-scale data pipelines processing approximately 100 million records daily using Pandas, Spark, and Hadoop, reducing pipeline runtime by a factor of three.",
       },
       {
         title: "AI service integration",
@@ -108,24 +109,12 @@ const experiences = [
     ],
     technologies: [
       "Python",
-      "PySpark",
+      "Pandas",
+      "Spark",
       "Hadoop",
       "FastAPI",
       "PyTorch",
     ],
-  },
-  {
-    period: "Apr 2022 - May 2022",
-    role: "Software Engineer Intern",
-    company: "Samsung, Vietnam",
-    highlights: [
-      {
-        title: "Just Jump Android game",
-        detail:
-          "Developed an offline casual Android game inspired by Bounce using Kotlin, separating player movement, obstacles, scoring, and game-state logic to simplify future updates.",
-      },
-    ],
-    technologies: ["Kotlin", "Android", "Game Development"],
   },
 ];
 

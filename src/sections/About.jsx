@@ -5,7 +5,7 @@ const highlights = [
     icon: Code2,
     title: "AI & Computer Vision",
     description:
-      "Built pretrained-model pipelines for retinal imaging and display defect detection in research and manufacturing settings.",
+      "Deployed an AI model for display-panel defect detection at Samsung Display, reducing manual inspection time by 40%.",
   },
   {
     icon: Rocket,
@@ -23,7 +23,7 @@ const highlights = [
     icon: Lightbulb,
     title: "Data & Cloud Engineering",
     description:
-      "Built distributed data pipelines with PySpark and Hadoop, then shipped cloud-native systems with Docker, Kubernetes, GitHub Actions, and DigitalOcean.",
+      "Built distributed data pipelines with PySpark and Hadoop, then shipped cloud-native systems with Docker, Kubernetes, GitHub Actions, and OVHcloud.",
   },
 ];
 

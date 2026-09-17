@@ -16,7 +16,7 @@ const skillGroups = [
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS", "DigitalOcean", "Docker", "Kubernetes", "GitHub Actions", "Git", "Linux"],
+    skills: ["AWS", "OVHcloud", "Cloudflare", "Docker", "Kubernetes", "GitHub Actions", "Git", "Linux"],
   },
   {
     title: "Data & Databases",
@@ -90,10 +90,10 @@ export const Hero = ({ onTabChange }) => {
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                 Hi, I'm Vincent Tong - a backend-focused software engineer with
-                2+ years of experience building backend services, data
+                experience building backend services, data
                 pipelines, and end-to-end web applications. I work across Go,
                 Python, TypeScript, SQL, and cloud-native infrastructure, and
-                I'm open to relocating to Vietnam.
+                I'm open to opportunities in Australia, Singapore, and Vietnam.
               </p>
             </div>
 
@@ -105,7 +105,7 @@ export const Hero = ({ onTabChange }) => {
 
               <AnimatedBorderButton
                 as="a"
-                href="https://tech-interview-prepare.vercel.app/#/"
+                href="https://prep.vincenttong.workers.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -168,11 +168,11 @@ export const Hero = ({ onTabChange }) => {
                   </div>
                 </div>
 
-                {/* Stats Badge */}
+                {/* Focus Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">2+</div>
+                  <div className="text-2xl font-bold text-primary">Backend</div>
                   <div className="text-xs text-muted-foreground">
-                    Years Exp.
+                    Engineering focus
                   </div>
                 </div>
 

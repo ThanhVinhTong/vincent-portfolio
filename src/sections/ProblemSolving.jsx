@@ -2,7 +2,7 @@ import { ArrowRight, Code2, ExternalLink, Lightbulb, Rocket, Users } from "lucid
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { Button } from "@/components/Button";
 
-const interviewPrepUrl = "https://tech-interview-prepare.vercel.app/#/";
+const interviewPrepUrl = "https://prep.vincenttong.workers.dev/";
 
 const practiceAreas = [
   {
